@@ -590,4 +590,40 @@ body {
     color: var(--text-muted);
     margin-top: 8px;
 }
+    /* --- Substack Feed List --- */
+.substack-list li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.substack-list li a:hover {
+    color: var(--hover-gold);
+}
+
+.substack-feed .feed-loading {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* --- Quote Block --- */
+.quote-block blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+}
+
+.quote-block blockquote footer {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
 }
