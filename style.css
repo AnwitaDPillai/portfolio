@@ -1,10 +1,13 @@
 /* --- Core Color Story (Directly Synchronized with Carrd) --- */
 :root {
-    --bg-color: #f1efe9;       /* The exact warm, literary book-leaf ivory from Carrd */
+    --bg-color: #f1efe9;       /* Warm, literary book-leaf ivory */
     --text-primary: #2c2a29;   /* Sharp, deep ink-charcoal black */
     --text-muted: #5e5b58;     /* Muted slate for metadata and subtitles */
     --border-color: #d7d3c9;   /* Soft, low-contrast rule dividers */
-    --hover-bg: #1c1b1a;       /* Pure ink black for interactive states */
+    --card-bg: rgba(255, 255, 255, 0.30);
+    --shadow-subtle: 0 4px 20px rgba(44, 42, 41, 0.04);
+    --hover-gold: #a88b6b;     /* Warm gold for hover accents */
+    --hover-gold-light: #c4b096; /* Lighter gold for button hover */
 }
 
 /* --- Document Setup --- */
@@ -21,6 +24,7 @@ body {
     line-height: 1.65;
     padding: 80px 24px;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -28,7 +32,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- Masthead Navigation (The New Yorker / Atlantic Frame) --- */
+/* --- Masthead --- */
 .masthead {
     text-align: center;
     margin-bottom: 70px;
@@ -40,6 +44,11 @@ body {
     font-weight: 400;
     letter-spacing: 8px;
     margin-bottom: 12px;
+    transition: letter-spacing 0.3s ease;
+}
+
+.logo:hover {
+    letter-spacing: 10px;
 }
 
 .subtitle {
@@ -67,22 +76,29 @@ body {
 /* --- Structural Columns --- */
 .column-label {
     display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
     color: var(--text-muted);
     text-transform: uppercase;
     margin-bottom: 24px;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 6px;
+    padding-bottom: 8px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    cursor: default;
 }
 
-/* Forces the specific projects divider label downward to form white space */
+/* Hover effect: underline darkens/beams */
+.column-label:hover {
+    border-bottom-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
 .inline-cta-box + .column-label {
-    margin-top: 55px !important; 
+    margin-top: 55px !important;
 }
 
-/* --- Left Column: Elucidated Prose & Manifesto --- */
+/* --- Left Column --- */
 .story-paragraph {
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
@@ -92,14 +108,13 @@ body {
     text-align: justify;
 }
 
-/* Drop-cap configuration for premium print feel */
 .story-paragraph.drop-cap::first-letter {
     font-family: 'Playfair Display', serif;
     float: left;
-    font-size: 4rem;
+    font-size: 4.2rem;
     line-height: 0.85;
     padding-top: 4px;
-    padding-right: 6px; /* Optimized tight margin for beautiful curly close curly quote anchor */
+    padding-right: 8px;
     font-weight: 500;
     color: var(--text-primary);
 }
@@ -107,42 +122,72 @@ body {
 .poetry-block {
     font-style: italic;
     border-left: 2px solid var(--text-primary);
-    padding-left: 16px;
+    padding-left: 20px;
     margin: 30px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--text-muted);
 }
 
-/* Structural Layout Spacing */
 .inline-cta-box {
     margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
-/* Monograph Focus Card */
+/* --- Featured Project Cards --- */
 .featured-project {
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 30px;
+    padding: 30px 32px;
     margin-top: 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.featured-project:hover {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: var(--text-primary);
+    box-shadow: var(--shadow-subtle);
+    transform: translateY(-2px);
 }
 
 .featured-project h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    font-weight: 400;
+    font-size: 1.65rem;
+    font-weight: 500;
     line-height: 1.3;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.featured-project h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--text-primary);
+    margin-top: 10px;
+    margin-bottom: 6px;
+    opacity: 0.3;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.featured-project:hover h2::after {
+    width: 60px;
+    opacity: 0.7;
 }
 
 .project-status-tag {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     color: var(--text-muted);
     margin-bottom: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* --- Right Column: Chronological Honors Ledger --- */
+/* --- Right Column: Ledger --- */
 .ledger-list {
     list-style: none;
 }
@@ -152,7 +197,13 @@ body {
     border-bottom: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
+    transition: all 0.2s ease;
+}
+
+.ledger-list li:hover {
+    padding-left: 8px;
+    border-bottom-color: var(--text-primary);
 }
 
 .ledger-list li:first-child {
@@ -165,25 +216,106 @@ body {
 
 .ledger-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 500;
     color: var(--text-primary);
 }
 
 .ledger-award {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
 }
 
-/* --- Structural Section Dividers --- */
+/* --- Research Proposals / Working Papers --- */
+.ledger-list.research-proposals li {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ledger-list.research-proposals li:hover {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: var(--text-primary);
+    box-shadow: var(--shadow-subtle);
+    padding-left: 28px;
+    transform: translateX(2px);
+}
+
+.ledger-list.research-proposals .ledger-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.ledger-list.research-proposals .ledger-award {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.ledger-list.research-proposals .ledger-award em {
+    font-style: italic;
+}
+
+/* --- Hobbyist Projects (Unique Card Style) --- */
+.ledger-list.hobbyist-projects li {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.ledger-list.hobbyist-projects li::before {
+    content: '◆';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--border-color);
+    font-size: 0.6rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ledger-list.hobbyist-projects li:hover {
+    background: rgba(255, 255, 255, 0.45);
+    border-color: var(--text-primary);
+    border-left-color: var(--hover-gold);
+    padding-left: 30px;
+    box-shadow: var(--shadow-subtle);
+    transform: translateX(4px);
+}
+
+.ledger-list.hobbyist-projects li:hover::before {
+    color: var(--hover-gold);
+    transform: translateY(-50%) scale(1.2);
+}
+
+.ledger-list.hobbyist-projects .ledger-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.ledger-list.hobbyist-projects .ledger-award {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Section Dividers --- */
 .section-divider {
     height: 1px;
     background-color: var(--border-color);
     margin: 60px 0;
 }
 
-/* --- Centralized Contact Architecture --- */
+/* --- Contact --- */
 .contact-block {
     text-align: center;
     max-width: 650px;
@@ -201,66 +333,232 @@ body {
     font-size: 1rem;
     color: var(--text-muted);
     margin-bottom: 30px;
+    line-height: 1.7;
 }
 
-/* Action Buttons (Upgraded from the generic Carrd blocks) */
-.editorial-btn, .contact-button-link {
+.contact-block p a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: color 0.2s ease;
+}
+
+.contact-block p a:hover {
+    color: var(--hover-gold);
+}
+
+/* --- Buttons --- */
+.editorial-btn {
     display: inline-block;
     border: 1px solid var(--text-primary);
     color: var(--text-primary);
     text-decoration: none;
-    padding: 12px 32px;
-    font-size: 0.85rem;
+    padding: 12px 36px;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: 2.5px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     background: transparent;
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-button-link {
-    background-color: var(--text-primary);
-    color: var(--bg-color);
+.editorial-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--text-primary);
+    transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
 }
 
 .editorial-btn:hover {
-    background-color: var(--text-primary);
     color: var(--bg-color);
 }
 
-.contact-button-link:hover {
-    background-color: transparent;
-    color: var(--text-primary);
+.editorial-btn:hover::before {
+    left: 0;
 }
 
-/* --- Colophon Footer --- */
+/* --- "Say Hello" Button — Fixed Hover with Gold Accent --- */
+.contact-button-link {
+    display: inline-block;
+    border: 1px solid var(--text-primary);
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 14px 44px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle shimmer overlay */
+.contact-button-link::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(168, 139, 107, 0.1), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.contact-button-link:hover {
+    border-color: var(--hover-gold);
+    background-color: var(--hover-gold);
+    color: var(--bg-color);
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(168, 139, 107, 0.25);
+}
+
+.contact-button-link:hover::after {
+    opacity: 1;
+}
+
+/* --- Footer --- */
 .site-footer {
     text-align: center;
     margin-top: 120px;
-    padding-top: 24px;
+    padding-top: 28px;
     border-top: 1px solid var(--border-color);
 }
 
 .colophon {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
-/* --- Responsive Layout Engine for Tablet/Mobile Devices --- */
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .magazine-grid {
+        gap: 50px;
+    }
+}
+
 @media (max-width: 900px) {
     body {
-        padding: 50px 20px;
+        padding: 40px 20px;
     }
+
     .magazine-grid {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 50px;
     }
+
     .logo {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         letter-spacing: 4px;
     }
+
+    .logo:hover {
+        letter-spacing: 5px;
+    }
+
     .story-paragraph {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
+    }
+
+    .featured-project {
+        padding: 22px 24px;
+    }
+
+    .featured-project h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-block h3 {
+        font-size: 1.8rem;
+    }
+
+    .ledger-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+    }
+
+    .story-paragraph {
+        font-size: 1rem;
+    }
+
+    .story-paragraph.drop-cap::first-letter {
+        font-size: 3.2rem;
+        padding-right: 4px;
+    }
+
+    .poetry-block {
+        font-size: 1rem;
+        padding-left: 14px;
+    }
+
+    .featured-project {
+        padding: 18px 18px;
+    }
+
+    .featured-project h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-status-tag {
+        font-size: 0.6rem;
+    }
+
+    .editorial-btn,
+    .contact-button-link {
+        padding: 10px 24px;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .contact-block h3 {
+        font-size: 1.5rem;
+    }
+
+    .ledger-title {
+        font-size: 0.95rem;
+    }
+
+    .ledger-award {
+        font-size: 0.7rem;
+    }
+
+    .colophon {
+        font-size: 0.6rem;
+    }
+
+    .ledger-list.research-proposals li,
+    .ledger-list.hobbyist-projects li {
+        padding: 16px 18px;
+    }
+
+    .ledger-list.hobbyist-projects li::before {
+        display: none;
     }
 }
