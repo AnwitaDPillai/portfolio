@@ -562,6 +562,275 @@ body {
         display: none;
     }
 
+    /* --- Mobile Optimisation: Effects & Interactions --- */
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+  .featured-project:hover {
+    transform: none !important;
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: none !important;
+  }
+
+  .featured-project h2::after {
+    width: 40px !important;
+    opacity: 0.3 !important;
+  }
+
+  .ledger-list li:hover {
+    padding-left: 0 !important;
+    border-bottom-color: var(--border-color) !important;
+  }
+
+  .ledger-list.research-proposals li:hover {
+    transform: none !important;
+    padding-left: 24px !important;
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: none !important;
+  }
+
+  .ledger-list.hobbyist-projects li:hover {
+    transform: none !important;
+    padding-left: 22px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--border-color) !important;
+    border-left-color: var(--border-color) !important;
+    box-shadow: none !important;
+  }
+
+  .ledger-list.hobbyist-projects li:hover::before {
+    color: var(--border-color) !important;
+    transform: translateY(-50%) scale(1) !important;
+  }
+
+  .contact-button-link:hover {
+    transform: none !important;
+    border-color: var(--text-primary) !important;
+    background-color: var(--text-primary) !important;
+    box-shadow: none !important;
+  }
+
+  .contact-button-link:hover::after {
+    opacity: 0 !important;
+  }
+
+  .editorial-btn:hover {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+  }
+
+  .editorial-btn:hover::before {
+    left: -100% !important;
+  }
+
+  .column-label:hover {
+    border-bottom-color: var(--border-color) !important;
+    color: var(--text-muted) !important;
+  }
+
+  .logo:hover {
+    letter-spacing: 8px !important;
+  }
+}
+
+/* --- Mobile: Reduce transitions for smoother scrolling --- */
+@media (max-width: 900px) {
+  .featured-project {
+    transition: none !important;
+  }
+
+  .featured-project h2::after {
+    transition: none !important;
+  }
+
+  .ledger-list li {
+    transition: none !important;
+  }
+
+  .ledger-list.research-proposals li {
+    transition: none !important;
+  }
+
+  .ledger-list.hobbyist-projects li {
+    transition: none !important;
+  }
+
+  .ledger-list.hobbyist-projects li::before {
+    transition: none !important;
+  }
+
+  .contact-button-link {
+    transition: none !important;
+  }
+
+  .contact-button-link::after {
+    transition: none !important;
+  }
+
+  .editorial-btn {
+    transition: none !important;
+  }
+
+  .editorial-btn::before {
+    transition: none !important;
+  }
+
+  .column-label {
+    transition: none !important;
+  }
+
+  .logo {
+    transition: none !important;
+  }
+
+  .substack-list li a {
+    transition: none !important;
+  }
+}
+
+/* --- Mobile: Larger touch targets --- */
+@media (max-width: 600px) {
+  .editorial-btn,
+  .contact-button-link {
+    padding: 14px 32px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inline-cta-box {
+    text-align: center;
+  }
+
+  .contact-block p {
+    font-size: 0.9rem;
+  }
+
+  .contact-block p a {
+    padding: 4px 0;
+  }
+}
+
+/* --- Mobile: Drop-cap size reduction --- */
+@media (max-width: 600px) {
+  .story-paragraph.drop-cap::first-letter {
+    font-size: 3rem;
+    padding-right: 4px;
+    padding-top: 6px;
+  }
+}
+
+/* --- Mobile: Card padding reduction --- */
+@media (max-width: 600px) {
+  .featured-project {
+    padding: 18px 16px;
+  }
+
+  .featured-project h2 {
+    font-size: 1.15rem;
+  }
+
+  .project-status-tag {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+
+  .story-paragraph {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .story-paragraph[style*="font-size: 1.1rem"] {
+    font-size: 0.95rem !important;
+  }
+
+  .ledger-list.research-proposals li,
+  .ledger-list.hobbyist-projects li {
+    padding: 14px 16px;
+  }
+
+  .ledger-list.hobbyist-projects li::before {
+    display: none;
+  }
+
+  .ledger-title {
+    font-size: 0.9rem;
+  }
+
+  .ledger-award {
+    font-size: 0.7rem;
+  }
+
+  .quote-block blockquote {
+    font-size: 0.95rem;
+  }
+
+  .quote-block blockquote footer {
+    font-size: 0.65rem;
+  }
+}
+
+/* --- Mobile: Grid gap reduction --- */
+@media (max-width: 900px) {
+  .magazine-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .magazine-grid {
+    gap: 30px;
+  }
+}
+
+/* --- Mobile: Masthead spacing --- */
+@media (max-width: 600px) {
+  .masthead {
+    margin-bottom: 40px;
+  }
+
+  .header-divider {
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* --- Mobile: Section divider spacing --- */
+@media (max-width: 600px) {
+  .section-divider {
+    margin: 40px 0;
+  }
+
+  .site-footer {
+    margin-top: 60px;
+    padding-top: 20px;
+  }
+}
+
+/* --- Mobile: Contact section --- */
+@media (max-width: 600px) {
+  .contact-block h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-block {
+    margin: 20px auto;
+  }
+
+  .contact-block p {
+    font-size: 0.85rem;
+  }
+}
+
     /* --- Substack Feed List --- */
 .substack-list li a {
     transition: color 0.2s ease;
