@@ -99,6 +99,22 @@ body::before {
     opacity: 0.05;
 }
 
+/* Smooth gradient transition overlay */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 100% 50% at 50% 50%, rgba(11, 15, 25, 0.4) 0%, rgba(11, 15, 25, 0.2) 50%, rgba(11, 15, 25, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.8s var(--ease-dramatic);
+    z-index: 99;
+}
+
+body.is-dark::after {
+    opacity: 1;
+}
+
 /* Screen reader skip link */
 .skip-link {
     position: fixed;
@@ -278,36 +294,34 @@ body.is-dark .stamp {
     z-index: 250;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    mix-blend-mode: difference;
-    color: #FFFFFF;
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--ochre);
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.cursor.is-active {
+    color: var(--research-green);
 }
 
 .cursor-crosshair {
-    width: 26px;
-    height: 14px;
-    border-top: 1px solid currentColor;
-    border-bottom: 1px solid currentColor;
-    position: relative;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 12px var(--ochre), 0 0 24px rgba(168, 139, 107, 0.5);
+}
+
+.cursor.is-active .cursor-crosshair {
+    text-shadow: 0 0 12px var(--research-green), 0 0 24px rgba(83, 104, 91, 0.5);
 }
 
 .cursor-crosshair::before {
     content: ">_";
-    position: absolute;
-    left: -1.2rem;
-    top: -0.7rem;
-    font-family: var(--mono);
-    font-size: 0.75rem;
 }
 
 .cursor-label {
-    font-family: var(--mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    white-space: nowrap;
+    display: none;
 }
 
 /* Unified Sleek Header & Integrated Progress */
@@ -365,6 +379,19 @@ body.is-dark .site-header {
 body.is-dark .brand-monogram {
     background: var(--archive-gold);
     color: var(--archive-black);
+}
+
+.brand-favicon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+body.is-dark .brand-favicon {
+    filter: brightness(1.1) drop-shadow(0 0 4px var(--archive-gold));
 }
 
 .brand-sub {
@@ -660,7 +687,7 @@ body.is-dark .spine a.is-active::after {
     font-size: 0.58rem;
     letter-spacing: 0.2em;
     color: var(--graphite);
-    cursor: pointer;
+    cursor: inherit;
 }
 
 .scroll-arrow {
@@ -848,7 +875,7 @@ body.is-dark .spine a.is-active::after {
     white-space: nowrap;
     text-align: left;
     transition: color 0.2s ease;
-    cursor: pointer;
+    cursor: inherit;
 }
 
 .band-item:hover,
@@ -945,7 +972,7 @@ body.is-dark .spine a.is-active::after {
     border-radius: 2px;
     background: rgba(168, 139, 107, 0.06);
     transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: inherit;
 }
 
 .dossier-media-btn:hover {
@@ -1071,7 +1098,7 @@ body.is-dark .spine a.is-active::after {
     border-radius: 2px;
     background: #FFFFFF;
     transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: inherit;
 }
 
 .artifact-popup-trigger:hover {
@@ -1162,7 +1189,7 @@ body.is-dark .spine a.is-active::after {
     inset: 0;
     background: radial-gradient(ellipse 70% 50% at 50% 25%, rgba(30, 58, 138, 0.22), transparent 75%);
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dark-archive-bg-texture {
@@ -1172,7 +1199,12 @@ body.is-dark .spine a.is-active::after {
     background-size: 640px auto;
     opacity: 0.35;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
+}
+
+.dark-heading {
+    position: relative;
+    z-index: 3;
 }
 
 .dark-heading .meta {
@@ -1273,7 +1305,7 @@ body.is-dark .spine a.is-active::after {
     border-radius: 2px;
     background: var(--paper-warm);
     transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: inherit;
 }
 
 .deck-shuffle-action:hover {
@@ -1287,7 +1319,7 @@ body.is-dark .spine a.is-active::after {
     width: 100%;
     max-width: 48rem;
     height: 480px;
-    cursor: pointer;
+    cursor: inherit;
 }
 
 .shuffling-card {
@@ -1647,7 +1679,7 @@ body.is-dark .spine a.is-active::after {
     border-radius: 2px;
     background: #FFFFFF;
     transition: all 0.2s ease;
-    cursor: pointer;
+    cursor: inherit;
 }
 
 .modal-close-btn:hover {

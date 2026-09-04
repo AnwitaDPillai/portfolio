@@ -596,11 +596,11 @@ function initScrollTriggers() {
         pinSpacing: true
     });
 
-    // 08 Seamless Dark Archive background toggle
+    // 08 Seamless Dark Archive background toggle with smoother gradient transition
     ScrollTrigger.create({
         trigger: "#research",
-        start: "top 60%",
-        end: "bottom 40%",
+        start: "top 65%",
+        end: "bottom 35%",
         onEnter: () => document.body.classList.add("is-dark"),
         onLeave: () => document.body.classList.remove("is-dark"),
         onEnterBack: () => document.body.classList.add("is-dark"),
@@ -665,8 +665,10 @@ function initCursor() {
         const target = e.target.closest("[data-cursor], a, button");
         if (target) {
             labelElem.textContent = target.dataset.cursor || (target.tagName === "A" ? "OPEN" : "READY");
+            cursorElem.classList.add("is-active");
         } else {
             labelElem.textContent = "READ";
+            cursorElem.classList.remove("is-active");
         }
     });
 }
