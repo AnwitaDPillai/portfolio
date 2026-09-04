@@ -8,9 +8,9 @@ The open-source codebase for my personal digital archive & portfolio.
 
 ## Overview
 
-This is not a conventional portfolio. It is a **living research archive** — a single-page editorial experience structured as 11 cinematic viewports, where documents, projects, and publications behave as physical artefacts in a scholarly collection.
+This is a single-page editorial experience structured as 11 cinematic viewports, where documents, projects, and publications behave as physical artefacts in a scholarly collection.
 
-The site is designed to feel like *an archive whose documents have started moving*: kinetic typography, stacker sections, horizontal provenance bands, and interactive decks work together to create a reading experience that is both editorial and alive.
+The site is designed to feel like an archive whose documents have started moving, with kinetic typography, stacker sections, horizontal provenance bands, and interactive decks work together to create a reading experience that is both editorial and alive.
 
 ---
 
