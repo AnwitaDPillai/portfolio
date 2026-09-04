@@ -3,391 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anwita D Pillai</title>
-    <meta name="description" content="Anwita D Pillai — Writer · Historian · Building public scholarship'">
-    <meta name="keywords" content="Anwita D Pillai, Anwita Pillai, Historian, South Asia History, Substack, Independent Researcher, Writer, Public Scholarship, AI Policy, Climate Policy, Stanford, New York Times, John Locke, Foyle Young Poets, Gold as Grammar, DOTE, Jargonaut">
+    <title>Anwita D Pillai — Digital Archive &amp; Portfolio</title>
+    <meta name="description" content="Anwita D Pillai — Writer, historian, and independent researcher building public scholarship across history, technology, science, and policy.">
     <meta name="author" content="Anwita D Pillai">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Anwita D Pillai — Writer · Historian · Building public scholarship">
-    <meta property="og:description" content="Historian of material culture, AI & climate policy researcher, NYT winner, 3x Stanford scholar. Currently finishing a 100,000-word monograph, Gold as Grammar.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Anwita D Pillai — Writer, Historian, Building Public Scholarship">
+    <meta property="og:description" content="An archival portfolio of research, monographs, essays, policy, and interactive systems.">
     <meta property="og:url" content="https://anwitadpillai.github.io/portfolio/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/brand/profile-picture.jpg">
 
+    <!-- Fonts: Estonia (distressed hand notes), Instrument Sans, Instrument Serif, IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
-    <link rel="icon" type="image/png" href="favicon.png">
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Estonia&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
-    <header class="masthead">
-        <h1 class="logo">ANWITA D PILLAI</h1>
-        <p class="subtitle">Writer &nbsp;·&nbsp; Historian &nbsp;·&nbsp; Building Public Scholarship</p>
-        <div class="header-divider"></div>
+    <!-- Styles & CDNs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+</head>
+<body data-mode="immersive">
+    <!-- Screen reader skip link -->
+    <a href="#main-content" class="skip-link">Skip to main archive content</a>
+
+    <!-- Custom Magnetic Cursor -->
+    <div class="cursor" data-cursor aria-hidden="true" hidden>
+        <span class="cursor-crosshair"></span>
+        <span class="cursor-label" data-cursor-label>READ</span>
+    </div>
+
+    <!-- Sticky Sleek Header & Integrated Progress -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#cover" class="header-brand" data-cursor="ARCHIVE">
+                <span class="brand-monogram">ADP</span>
+                <span class="brand-title">Anwita D Pillai <span class="brand-sub">· Archive</span></span>
+            </a>
+            <div class="header-controls">
+                <span class="header-index" data-nav-index>01 / 11 · OPENING</span>
+                <button type="button" class="mode-toggle" data-mode-toggle aria-pressed="false" data-cursor="TOGGLE">
+                    <span class="mode-label">Quiet Mode</span>
+                </button>
+            </div>
+        </div>
+        <div class="header-progress" aria-hidden="true">
+            <span class="header-progress-bar" data-scroll-progress></span>
+        </div>
     </header>
 
-    <main class="container">
-        <div class="magazine-grid">
+    <!-- Interactive Spine Navigation (11 Chapters) -->
+    <nav class="spine" aria-label="Archive Chapters">
+        <a href="#cover" data-spine="cover" data-title="Opening"><span class="spine-num">01</span><span class="spine-name">Opening</span></a>
+        <a href="#about" data-spine="about" data-title="About"><span class="spine-num">02</span><span class="spine-name">About</span></a>
+        <a href="#provenance" data-spine="provenance" data-title="Provenance"><span class="spine-num">03</span><span class="spine-name">Provenance</span></a>
+        <a href="#experience" data-spine="experience" data-title="Experience"><span class="spine-num">04</span><span class="spine-name">Experience</span></a>
+        <a href="#projects" data-spine="projects" data-title="Projects"><span class="spine-num">05</span><span class="spine-name">Projects</span></a>
+        <a href="#publications" data-spine="publications" data-title="Publications"><span class="spine-num">06</span><span class="spine-name">Publications</span></a>
+        <a href="#awards" data-spine="awards" data-title="Awards"><span class="spine-num">07</span><span class="spine-name">Awards</span></a>
+        <a href="#research" data-spine="research" data-title="Dark Archive"><span class="spine-num">08</span><span class="spine-name">Dark Archive</span></a>
+        <a href="#playground" data-spine="playground" data-title="Playground"><span class="spine-num">09</span><span class="spine-name">Playground</span></a>
+        <a href="#writing" data-spine="writing" data-title="Recent Writing"><span class="spine-num">10</span><span class="spine-name">Recent Writing</span></a>
+        <a href="#colophon" data-spine="colophon" data-title="Colophon"><span class="spine-num">11</span><span class="spine-name">Colophon</span></a>
+    </nav>
 
-            <!-- ===== LEFT COLUMN ===== -->
-            <article class="left-column">
-
-                <!-- ABOUT (UNCHANGED) -->
-                <span class="column-label">ABOUT</span>
-
-                <p class="story-paragraph drop-cap">
-                    I’m the kind of person who reads footnotes for fun and holds grudges on behalf of dead people.
-                </p>
-
-                <p class="story-paragraph">
-                    I got into archives because I was nosy about the wrong things. That curiosity turned into a book-length project, a pile of competition certificates, and bylines that still feel like a prank someone played on my life. I’m currently building a Substack because I believe rigorous history should be as readable as a good grudge, and finishing a monograph because I started it and I’m stubborn.
-                </p>
-
-                <p class="poetry-block">
-                    I also write poetry, which is just history with the citations removed.
-                </p>
-
-                <div class="inline-cta-box">
-                    <a href="https://anwitadpillai.substack.com/" target="_blank" class="editorial-btn">Read the Substack</a>
+    <!-- Main Content: The 11 Viewport Experiences -->
+    <main id="main-content">
+        <!-- 01: OPENING (The Title Page — Form-Fitted Layout) -->
+        <section id="cover" class="chapter cover" data-chapter="cover" data-index="01" data-label="OPENING">
+            <div class="cover-inner">
+                <div class="cover-meta-bar">
+                    <p class="meta" data-typewriter>ARCHIVE / 001</p>
+                    <p class="meta cover-loc">KERALA, INDIA · LIVING ARCHIVE</p>
                 </div>
-
-                <!-- RESEARCH & PROGRAMS -->
-                <span class="column-label">RESEARCH & PROGRAMS</span>
-
-                <!-- FIC SRCC Research Fellowship -->
-<div class="featured-project" style="margin-bottom: 30px;">
-    <h2>Finance and Investment Cell Research Fellowship</h2>
-    <p class="project-status-tag">SRCC, University of Delhi &nbsp;|&nbsp; 2026 Fellow</p>
-    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-        Selected for the FIC Research Fellowship 2026 at Shri Ram College of Commerce, University of Delhi; one of India’s most competitive research programmes. Research is based on the fields of finance, policy, and socio-economic systems. Developing a lens grounded in material culture and the politics of technology by exploring how financial systems shape (and are shaped by) broader social structures.
-    </p>
-</div>
-                
-                <!-- C.R.A.F.T. -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>C.R.A.F.T. Research Scholars Program</h2>
-                    <p class="project-status-tag">Content Analysis Track &nbsp;|&nbsp; UCLA-Affiliated</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Conducting qualitative research at the intersection of medical humanities and public health communication. Auditing how complex scientific data are translated or stripped away in mainstream public media. Applying computational thinking to humanities research questions.
-                    </p>
+                <div class="cover-layout-grid">
+                    <div class="cover-hero">
+                        <h1 class="kinetic-title">
+                            <span class="title-line" data-cover-line>Anwita</span>
+                            <span class="title-line" data-cover-line>D Pillai</span>
+                        </h1>
+                        <p class="cover-subtitle" data-site-title></p>
+                    </div>
+                    <div class="cover-narrator">
+                        <div class="cover-mascot-wrap">
+                            <img class="cover-mascot" src="assets/mascot/base-character.png" alt="Anwita D Pillai" width="280" height="280">
+                        </div>
+                        <p class="archival-note cover-quip">Currently alphabetising footnotes.</p>
+                    </div>
                 </div>
-
-                <!-- Stanford Molecular Imaging -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Molecular Imaging &amp; Radionuclide Therapy</h2>
-                    <p class="project-status-tag">Stanford Faculty-Run Mini Fellowship &nbsp;|&nbsp; 2026 Scholar</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Participating in advanced seminars on molecular imaging and the ethical dimensions of algorithmic diagnostics, as well as conducting original research within the same. Interdisciplinary graduate-level research bridging physics, chemistry, and biology.
-                    </p>
+                <div class="cover-footer-row">
+                    <div class="cover-scroll-indicator" data-cursor="SCROLL">
+                        <span class="scroll-cue">SCROLL TO READ</span>
+                        <span class="scroll-arrow" aria-hidden="true">↓</span>
+                    </div>
                 </div>
-
-                <!-- Stanford iGEM -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Bioengineering Research (iGEM)</h2>
-                    <p class="project-status-tag">Stanford SiBRP &nbsp;|&nbsp; 4.5% Acceptance Rate</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Collaborating on team-based synthetic biology research, applying genetic engineering and experimental design to challenges in health and sustainability. Selected from a highly competitive international applicant pool.
-                    </p>
-                </div>
-
-                <!-- Stanford Neuroscience Journal Club -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Neuroscience Journal Club</h2>
-                    <p class="project-status-tag">Stanford University &nbsp;|&nbsp; Yearlong Monthly Seminar</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Engaging critically with primary neuroscience literature in a yearlong monthly seminar alongside Stanford faculty and peers. Exploring the biological underpinnings of memory, attention, and cognition through close reading and discussion.
-                    </p>
-                </div>
-
-                <!-- IYNA -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>International Youth Neuroscience Association (IYNA) Neuroscience I &amp; II</h2>
-                    <p class="project-status-tag">Scholar &nbsp;|&nbsp; Dual-Track Asynchronous Study</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Collaborating on open-science initiatives translating neurological mechanisms into education frameworks. Connecting neuroscience frameworks to humanities research on digital memory, attention economies, and algorithmic cognition.
-                    </p>
-                </div>
-
-                <!-- sci-MI -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Sci-MI (Science Mentorship Institute)</h2>
-                    <p class="project-status-tag">Scholar &nbsp;|&nbsp; Neuroscience</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Engaging in advanced neuroscience research methodologies, focusing on cellular mechanisms and neural circuitry. Analyzing complex biological datasets to investigate brain function, cognitive processes, and the neurological foundations of behaviour.
-                    </p>
-                </div>
-
-                <!-- Kode with Klossy -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Kode with Klossy</h2>
-                    <p class="project-status-tag">Web Development Scholar &nbsp;|&nbsp; May 2026 – June 2026</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Designed and built a web application from scratch using HTML, CSS, and JavaScript. Led front-end development and coordinated sprint tasks across a team of three to deliver a functional prototype on deadline.
-                    </p>
-                </div>
-
-                <!-- Substack -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Substack &amp; Public History</h2>
-                    <p class="project-status-tag">Founder &amp; Author &nbsp;|&nbsp; March 2026 – Present</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Founded and maintain a Substack publication of 20+ organic subscribers producing accessible, long-form technology journalism and cultural commentary on AI, digital culture, and the politics of technology for a general readership.
-                    </p>
-                </div>
-
-                <!-- PROJECTS -->
-                <span class="column-label" style="display: block; margin-top: 50px; margin-bottom: 20px;">PROJECTS</span>
-
-                <!-- Book -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Gold as Grammar</h2>
-                    <p class="project-status-tag">100,000 Words &nbsp;|&nbsp; Draft Complete</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Currently authoring a 100,000-word monograph examining how women in colonial South Asia used material objects—gold, salt, cloth—as grammars of political refusal, 1900–1950. The book-length investigation analyses the physical, tactile objects and underground logistical infrastructures that structured anti-colonial resistance across South Asia.
-                    </p>
-                </div>
-
-                <!-- Roots, Reefs -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Roots, Reefs, and Restoration</h2>
-                    <p class="project-status-tag">Winner · Ocean Society of India &nbsp;|&nbsp; Presented at CSIR-CUSAT</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Authored a marine plastic pollution mitigation proposal for the Ocean Society of India; developed actionable coastal waste management strategies recognised as competition winner; presented at CSIR-CUSAT. Designed a four-pillar, locally-sourced solution combining coconut-fiber nets, biofilm cascades, clay flocculation, and community action to combat microplastic pollution.
-                    </p>
-                </div>
-
-                <!-- DOTE -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>The Debt of the Earth (DOTE)</h2>
-                    <p class="project-status-tag">AI Platform · Climate Finance · Proposed to NY Climate Exchange</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        Developing an AI-powered platform that quantifies the relationship between colonial-era resource extraction and contemporary climate vulnerability. Calculates the “climate debt” owed to formerly colonised regions—shifting the conversation from charity to justice. Proposed to the 2026 Climate Tech Fellowship.
-                    </p>
-                </div>
-
-                <!-- Jargonaut -->
-                <div class="featured-project" style="margin-bottom: 30px;">
-                    <h2>Jargonaut</h2>
-                    <p class="project-status-tag">AI Platform Concept · Proposed to Moonshot Awards</p>
-                    <p class="story-paragraph" style="font-size: 1.1rem; margin-bottom: 0;">
-                        An AI platform translating institutional language in central bank policies, public health data, and legal documents into plain-language summaries. Built on the belief that access to expertise should not be a privilege. Proposed to the Moonshot Awards.
-                    </p>
-                </div>
-
-            </article>
-
-            <!-- ===== RIGHT COLUMN ===== -->
-            <aside class="right-column">
-
-                <!-- PUBLICATIONS -->
-                <span class="column-label">PUBLICATIONS</span>
-
-                <ul class="ledger-list">
-                    <li>
-                        <span class="ledger-title">New York Times</span>
-                        <span class="ledger-award">"Growing Up With AI" — Winner (1 of 35 from 3,000+ entries)</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Foyle Young Poets Award</span>
-                        <span class="ledger-award">Commended Winner (Top 85 of 15,000+ entries) — "Marginalia" in 2025 Anthology (The Poetry Society)</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">The Suburban Review</span>
-                        <span class="ledger-award">Issue #40 "Untrue" — Fiction (Paid Publication)</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Ministry of Education</span>
-                        <span class="ledger-award">"Moonfall" — Essay, Sapno Ki Udaan, 1st Edition</span>
-                    </li>
-                </ul>
-
-                <!-- HONORS & AWARDS -->
-                <span class="column-label" style="margin-top: 40px;">HONORS &amp; AWARDS</span>
-
-                <ul class="ledger-list">
-                    <li>
-                        <span class="ledger-title">John Locke Global Essay Prize</span>
-                        <span class="ledger-award">2025: High Commendation; 2026: Shortlisted (Top 17.5% of 100,000+ entries from 183 countries)</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Queen’s Commonwealth Essay Competition</span>
-                        <span class="ledger-award">Silver Award recipient</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Korea Centre Essay Contest</span>
-                        <span class="ledger-award">First Place (High School Division) for cross-cultural geopolitical analysis</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">EJCA Haiku Competition</span>
-                        <span class="ledger-award">First Place, Under-16</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">The Fountain Magazine</span>
-                        <span class="ledger-award">Top Ten — Essay Contest</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Waterman Fund</span>
-                        <span class="ledger-award">Shortlisted Finalist — Emerging Writers Contest</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Ocean Society of India</span>
-                        <span class="ledger-award">Winner — Marine Plastic Pollution Proposal</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Institute of Chartered Accountants of India</span>
-                        <span class="ledger-award">National Rank 13 — Commerce Olympiad 2024</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Indian Meteorological Department</span>
-                        <span class="ledger-award">Official Representative for the State of Kerala — MET Olympiad 2024</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Vidyarthi Vigyan Manthan</span>
-                        <span class="ledger-award">State-Level Camp Qualifier 2024</span>
-                    </li>
-                </ul>
-
-                <!-- RESEARCH PAPERS -->
-                <span class="column-label" style="margin-top: 40px;">RESEARCH PAPERS</span>
-
-                <ul class="ledger-list research-proposals">
-                    <li>
-                        <span class="ledger-title">The Fractured Ladder</span>
-                        <span class="ledger-award">Working paper (2026) — Developed the theoretical framework of “power-based technological change,” analysing how AI erodes worker bargaining power through linguistic and algorithmic restructuring of the workplace.</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">The Silence Premium</span>
-                        <span class="ledger-award">Working paper (2026) — Quantitative study documenting pre-announcement drift in equity, bond, and currency markets, demonstrating information asymmetry in institutional communication.</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Staircase to Healing</span>
-                        <span class="ledger-award">Working paper — Submitted to <em>BMJ Medical Humanities</em> (under review).</span>
-                    </li>
-                </ul>
-
-                <!-- GRANT PROPOSALS -->
-                <span class="column-label" style="margin-top: 40px;">GRANT PROPOSALS</span>
-
-                <ul class="ledger-list research-proposals">
-                    <li>
-                        <span class="ledger-title">OpenAI Economic Research Exchange</span>
-                        <span class="ledger-award">Proposed "The Language of Opportunity: Measuring and Mitigating AI-Mediated Linguistic Gatekeeping in Hiring," investigating AI-mediated linguistic gatekeeping in hiring. Requested $25,000 + RA stipend.</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Center for Humane Technology (CHT) Emerging Voices Fellowship</span>
-                        <span class="ledger-award">Proposed "The Collapse of Genre: How the Conversational Interface Is Rewiring Human Knowledge," examining how conversational interfaces are rewiring human knowledge. Seeking $30,000 stipend + public platform.</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">Moonshot Awards</span>
-                        <span class="ledger-award">Proposed Jargonaut, an AI platform translating institutional language into plain-language summaries. Seeking equity-free grant funding and global recognition.</span>
-                    </li>
-                    <li>
-                        <span class="ledger-title">New York Climate Exchange Climate Tech Fellowship</span>
-                        <span class="ledger-award">Proposed The Debt of the Earth (DOTE), developing an AI-powered platform that quantifies the relationship between colonial-era resource extraction and contemporary climate vulnerability.</span>
-                    </li>
-                </ul>
-
-                <!-- HOBBYIST PROJECTS -->
-                <span class="column-label" style="margin-top: 40px;">HOBBYIST PROJECTS</span>
-
-<ul class="ledger-list hobbyist-projects">
-    <li>
-        <span class="ledger-title"><a href="https://anwitadpillai.github.io/phenotype-abm/" target="_blank" rel="noopener noreferrer">Phenotype</a></span>
-        <span class="ledger-award">An evolutionary agent-based game-theory simulator built with HTML5 Canvas and JavaScript. Models emergent behaviour in competitive environments through interactive visualisation.</span>
-    </li>
-    <li>
-        <span class="ledger-title"><a href="https://nethernet.vercel.app/" target="_blank" rel="noopener noreferrer">Nethernet</a></span>
-        <span class="ledger-award">A 3D internet archaeology engine using Three.js and the Wayback Machine API. Visualises the evolution of the web over time, rendering archived websites as explorable 3D environments.</span>
-    </li>
-    <li>
-        <span class="ledger-title"><a href="https://anwitadpillai.github.io/offtrack/" target="_blank" rel="noopener noreferrer">Offtrack</a></span>
-        <span class="ledger-award">An AI-powered diagnostic tool that turns your Spotify listening history into a brutally honest, visually arresting self-portrait. Upload your Extended Streaming History and receive your Aux Risk Score, Listening Era, and a personalised roast—all processed locally, with zero data storage.</span>
-    </li>
-</ul>
-
-                <!-- RECENT WRITING (AUTOMATED) -->
-<span class="column-label" style="margin-top: 40px;">RECENT WRITING</span>
-
-<div id="substack-feed" class="substack-feed">
-    <p class="feed-loading" style="color: var(--text-muted); font-size: 0.9rem;">Loading recent essays...</p>
-</div>
-                <!-- QUOTE -->
-<div class="quote-block" style="margin-top: 40px; padding: 24px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-    <blockquote style="font-family: 'Playfair Display', serif; font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); font-style: italic; margin: 0; text-align: center;">
-        “I am out with lanterns, looking for myself.”
-        <footer style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-style: normal; letter-spacing: 1px; color: var(--text-muted); margin-top: 8px;">— Emily Dickinson</footer>
-    </blockquote>
-</div>
-
-            </aside>
-
-        </div>
-
-        <div class="section-divider"></div>
-
-        <!-- CONTACT -->
-        <section class="contact-block">
-            <h3>Get In Touch</h3>
-            <p>My inbox is a no-judgment zone (unless you use Comic Sans).<br>You can also find me on <a href="https://github.com/anwitadpillai" target="_blank">GitHub</a> and <a href="https://www.linkedin.com/in/anwita-d-pillai/" target="_blank">LinkedIn</a>.</p>
-            <a href="mailto:anwitadpillai007@gmail.com" class="contact-button-link">Say Hello!</a>
+            </div>
         </section>
 
+        <!-- 02: ABOUT (The Margin) -->
+        <section id="about" class="chapter about-chapter" data-chapter="about" data-index="02" data-label="ABOUT">
+            <div class="chapter-heading">
+                <p class="meta">02 / The Margin</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">ABOUT</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-narrative">
+                    <p class="story drop-cap reveal" data-about-paragraph="0"></p>
+                    <p class="story reveal" data-about-paragraph="1"></p>
+                    <div class="poetry-wrapper reveal">
+                        <p class="poetry" data-about-poetry></p>
+                    </div>
+                    <div class="about-actions reveal">
+                        <a class="editorial-btn" data-about-cta href="https://anwitadpillai.substack.com/" target="_blank" rel="noopener noreferrer" data-cursor="ESSAYS">
+                            <span class="btn-text">Read the Substack</span>
+                            <span class="btn-arrow" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+                <aside class="about-margin">
+                    <div class="portrait-frame reveal">
+                        <img src="assets/brand/profile-picture.jpg" alt="Anwita D Pillai" class="portrait-img">
+                        <figcaption class="portrait-caption">
+                            <span class="caption-label">FIG. 1.0 — RECORD</span>
+                            <span class="caption-text">Researcher in natural habitat, holding grudges on behalf of dead people.</span>
+                        </figcaption>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- 03: AFFILIATIONS (Continuous Rotating Bands) -->
+        <section id="provenance" class="chapter provenance-chapter" data-chapter="provenance" data-index="03" data-label="PROVENANCE">
+            <div class="chapter-heading">
+                <p class="meta">03 / Provenance</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">AFFILIATIONS &amp; SCHOLARSHIPS</p>
+            </div>
+            <p class="section-intro reveal">Textual provenance gathered across research fellowships, bioengineering labs, and independent institutions (pauses on hover).</p>
+            <div class="affiliation-stream" data-affiliation-bands></div>
+        </section>
+
+        <!-- 04: EXPERIENCE (The Stack) -->
+        <section id="experience" class="chapter experience-chapter" data-chapter="experience" data-index="04" data-label="EXPERIENCE">
+            <div class="chapter-heading">
+                <p class="meta">04 / The Stack</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">RESEARCH &amp; FELLOWSHIPS</p>
+            </div>
+            <p class="section-intro">Archival dossier of fellowships, quantitative labs, and qualitative inquiry.</p>
+            <div class="stacker-container" data-experience-stack></div>
+        </section>
+
+        <!-- 05: PROJECTS (The Shuffle / Sticky Cards) -->
+        <section id="projects" class="chapter projects-chapter" data-chapter="projects" data-index="05" data-label="PROJECTS">
+            <div class="chapter-heading">
+                <p class="meta">05 / The Intellectual Projects</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">MAJOR MONOGRAPHS &amp; SYSTEMS</p>
+            </div>
+            <p class="section-intro">Monographs, policy frameworks, and living research systems (stacked archival notes).</p>
+            <div class="sticky-projects-deck" data-major-projects></div>
+        </section>
+
+        <!-- 06: PUBLICATIONS (The Ledger) -->
+        <section id="publications" class="chapter publications-chapter" data-chapter="publications" data-index="06" data-label="PUBLICATIONS">
+            <div class="chapter-heading">
+                <p class="meta">06 / The Ledger</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">PUBLICATIONS</p>
+            </div>
+            <p class="section-intro">Published writing, national essays, fiction, and forthcoming anthologies.</p>
+            <div class="ledger-table" data-publications></div>
+        </section>
+
+        <!-- 07: AWARDS (The Honours Ledger) -->
+        <section id="awards" class="chapter awards-chapter" data-chapter="awards" data-index="07" data-label="AWARDS">
+            <div class="chapter-heading">
+                <p class="meta">07 / The Honours Ledger</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">HONOURS &amp; AWARDS</p>
+            </div>
+            <p class="section-intro">International recognitions, literary commendations, and Olympiads.</p>
+            <div class="ledger-table" data-awards></div>
+        </section>
+
+        <!-- 08: RESEARCH PAPERS & GRANTS (The Dark Archive) -->
+        <section id="research" class="chapter dark-archive-chapter" data-chapter="research" data-index="08" data-label="DARK ARCHIVE">
+            <div class="dark-archive-bg-glow" aria-hidden="true"></div>
+            <div class="dark-archive-bg-texture" aria-hidden="true"></div>
+            <div class="chapter-heading dark-heading">
+                <p class="meta">08 / The Dark Archive</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">WORKING PAPERS &amp; GRANTS</p>
+            </div>
+            <p class="section-intro dark-intro">Theoretical inquiry into algorithmic power, market information asymmetry, and human genres.</p>
+            <div class="dark-ledger-table" data-research-ledger></div>
+        </section>
+
+        <!-- 09: HOBBYIST PROJECTS (The Playground / Interactive Shuffling Deck) -->
+        <section id="playground" class="chapter playground-chapter" data-chapter="playground" data-index="09" data-label="PLAYGROUND">
+            <div class="chapter-heading">
+                <p class="meta">09 / The Playground</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">HOBBYIST &amp; TECHNICAL EXPERIMENTS</p>
+            </div>
+            <p class="section-intro">Interactive computational experiments, web archaeology, and localized AI roasts (click deck to shuffle projects).</p>
+            <div class="playground-deck-stage" data-experiments-stage>
+                <div class="deck-controls-bar">
+                    <span class="deck-counter" data-deck-counter>CARD 01 / 03</span>
+                    <button type="button" class="deck-shuffle-action" data-deck-shuffle data-cursor="SHUFFLE">
+                        <span>Shuffle Next Project 🗂</span>
+                    </button>
+                </div>
+                <div class="shuffling-deck-container" data-experiments-deck data-cursor="SHUFFLE"></div>
+            </div>
+        </section>
+
+        <!-- 10: RECENT WRITING (The Content Trail) -->
+        <section id="writing" class="chapter writing-chapter" data-chapter="writing" data-index="10" data-label="WRITING">
+            <div class="chapter-heading">
+                <p class="meta">10 / The Content Trail</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">RECENT WRITING &amp; ESSAYS</p>
+            </div>
+            <div class="writing-meta-row">
+                <p class="section-intro">Dispatches from Substack — public history, archival grudges, and cultural analysis.</p>
+                <a href="https://anwitadpillai.substack.com/" target="_blank" rel="noopener noreferrer" class="substack-badge" data-cursor="OPEN">
+                    <span>Subscribe on Substack ↗</span>
+                </a>
+            </div>
+            <div class="substack-feed-container" data-substack-feed>
+                <p class="feed-status" data-feed-status>Loading recent essays from the wire...</p>
+            </div>
+        </section>
+
+        <!-- 11: CONTACT (The Colophon) -->
+        <section id="colophon" class="chapter colophon-chapter" data-chapter="colophon" data-index="11" data-label="COLOPHON">
+            <div class="chapter-heading">
+                <p class="meta">11 / The Colophon</p>
+                <i class="rule-line" aria-hidden="true"></i>
+                <p class="meta">CONTACT &amp; PROVENANCE</p>
+            </div>
+            <div class="colophon-grid">
+                <div class="colophon-main">
+                    <h2 class="colophon-heading" data-contact-heading>Get In Touch</h2>
+                    <p class="contact-body" data-contact-body></p>
+                    <p class="contact-secondary" data-contact-secondary></p>
+                    
+                    <div class="colophon-cta-row">
+                        <a class="colophon-button" data-contact-email href="mailto:anwitadpillai007@gmail.com" data-cursor="WRITE">
+                            <span class="btn-text">Say Hello!</span>
+                            <span class="btn-paper-seal" aria-hidden="true">✉</span>
+                        </a>
+                        <span class="email-direct">anwitadpillai007@gmail.com</span>
+                    </div>
+
+                    <div class="colophon-socials" data-contact-links></div>
+
+                    <blockquote class="colophon-quote">
+                        <p class="quote-body" data-quote-text></p>
+                        <cite class="quote-author" data-quote-author></cite>
+                    </blockquote>
+                </div>
+                <div class="colophon-aside-centre">
+                    <img src="assets/mascot/smiling-chin-on-palm.png" alt="Anwita D Pillai Mascot" class="colophon-mascot">
+                    <p class="archival-note">Stay tuned for more!</p>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Site Footer -->
     <footer class="site-footer">
-        <p class="colophon">Set in digital ink. Powered by raw code.</p>
+        <div class="footer-inner">
+            <p class="footer-meta" data-footer-text>Set in digital ink. Powered by raw code.</p>
+            <p class="footer-provenance">ANWITA D PILLAI ARCHIVE · 2026</p>
+        </div>
     </footer>
 
-        <!-- ===== JAVASCRIPT: SUBSTACK FEED ===== -->
-    <script>
-        // Fetch and display recent Substack posts
-        async function loadSubstackFeed() {
-            const container = document.getElementById('substack-feed');
-            const feedUrl = 'https://anwitadpillai.substack.com/feed';
+    <!-- Archival Image / Artifact Popup Modal (Rich, deliberate easing) -->
+    <div id="artifact-modal" class="artifact-modal" aria-hidden="true" role="dialog" aria-modal="true" hidden>
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <span class="modal-plate-tag" id="modal-tag">ARCHIVAL PLATE</span>
+                <button type="button" class="modal-close-btn" data-modal-close aria-label="Close artifact viewer">✕ Close</button>
+            </div>
+            <div class="modal-image-wrapper">
+                <img src="" alt="" id="modal-image" class="modal-img">
+            </div>
+            <div class="modal-caption-area">
+                <h4 class="modal-title" id="modal-title"></h4>
+                <p class="modal-subtitle" id="modal-subtitle"></p>
+            </div>
+        </div>
+    </div>
 
-            try {
-                // Use rss2json API as a proxy
-                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`);
-                const data = await response.json();
+    <!-- Libraries & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 
-                if (data.status === 'ok') {
-                    // Get the 5 most recent posts
-                    const posts = data.items.slice(0, 5);
+    <!-- Canonical Data (Strictly Read-Only) -->
+    <script src="data/site-config.js"></script>
+    <script src="data/affiliations.js"></script>
+    <script src="data/experience.js"></script>
+    <script src="data/projects.js"></script>
+    <script src="data/publications.js"></script>
+    <script src="data/awards.js"></script>
+    <script src="data/research.js"></script>
 
-                    let html = '<ul class="ledger-list substack-list">';
-                    posts.forEach(post => {
-                        // Format the date
-                        const date = new Date(post.pubDate);
-                        const formattedDate = date.toLocaleDateString('en-US', {
-                            month: 'short',
-                            day: 'numeric',
-                            year: 'numeric'
-                        });
-
-                        html += `
-                            <li>
-                                <span class="ledger-title"><a href="${post.link}" target="_blank" style="color: var(--text-primary); text-decoration: none; transition: color 0.2s ease;">${post.title}</a></span>
-                                <span class="ledger-award">${formattedDate}</span>
-                            </li>
-                        `;
-                    });
-                    html += '</ul>';
-                    container.innerHTML = html;
-                } else {
-                    container.innerHTML = '<p style="color: var(--text-muted); font-size: 0.9rem;">Unable to load recent essays.</p>';
-                }
-            } catch (error) {
-                console.error('Error loading Substack feed:', error);
-                container.innerHTML = '<p style="color: var(--text-muted); font-size: 0.9rem;">Unable to load recent essays.</p>';
-            }
-        }
-
-        // Load the feed when the page loads
-        document.addEventListener('DOMContentLoaded', loadSubstackFeed);
-    </script>
-    
+    <!-- Application Script -->
+    <script src="script.js"></script>
 </body>
 </html>
