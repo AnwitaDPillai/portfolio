@@ -83,6 +83,11 @@ body {
     transition: background-color 0.8s var(--ease-dramatic), color 0.8s var(--ease-dramatic);
 }
 
+body,
+body * {
+    cursor: none !important;
+}
+
 body.is-dark {
     background-color: var(--archive-black);
     color: var(--archive-text);
@@ -291,7 +296,7 @@ body.is-dark .stamp {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 250;
+    z-index: 1000;
     pointer-events: none;
     transform: translate(-50%, -50%);
     font-family: var(--mono);
@@ -1732,6 +1737,10 @@ body[data-mode="quiet"] {
     cursor: auto !important;
 }
 
+body[data-mode="quiet"] * {
+    cursor: auto !important;
+}
+
 body[data-mode="quiet"] .cursor {
     display: none !important;
 }
@@ -1759,8 +1768,9 @@ body[data-mode="quiet"] .hl {
    18. RESPONSIVE MEDIA QUERIES (Mobile & Tablet Ergonomics)
    -------------------------------------------------------------------------- */
 @media (max-width: 960px) {
-    body {
-        cursor: auto;
+    body,
+    body * {
+        cursor: auto !important;
     }
     
     .cursor {
