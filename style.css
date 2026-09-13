@@ -64,9 +64,15 @@ html {
     background-color: var(--paper);
     color: var(--ink);
     scroll-behavior: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -451,6 +457,49 @@ body.is-dark .mode-toggle:hover {
     right: 0;
     height: 2px;
     background: transparent;
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    transition: opacity 0.5s var(--ease-out);
+}
+.loading-card {
+    background: var(--paper-warm);
+    padding: 2rem 3rem;
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 90vw;
+}
+.loading-title {
+    margin: 0 0 1rem;
+    font-family: var(--serif);
+    font-size: clamp(2rem,4vw,3rem);
+    color: var(--ink);
+}
+.loading-status {
+    margin: 0 0 0.5rem;
+    font-family: var(--mono);
+    color: var(--graphite);
+}
+.loading-stamp {
+    opacity: 0;
+    transform: scale(0.6) rotate(-10deg);
+    transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+    display: block;
+    margin: 1rem auto 0;
+    max-width: 8rem;
+}
+.loading-stamp.visible {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
 }
 
 .header-progress-bar {

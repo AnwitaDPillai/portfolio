@@ -758,6 +758,36 @@ function startApplication() {
     initIntersectionObservers();
     initCursor();
     typeCoverTitle();
+    // Start rotating status messages (if not already started)
+    const loadingScreen = $('#loading-screen');
+    if (loadingScreen) {
+        // Record start time if not set
+        if (!loadingScreen.dataset.start) loadingScreen.dataset.start = Date.now();
+        const statusEl = $('.loading-status');
+        const messages = [
+            'Cataloguing…',
+            'Verifying provenance…',
+            'Cross-referencing…',
+            'Finalising record…'
+        ];
+        let idx = 0;
+        // Clear any previous interval just in case
+        if (loadingScreen.dataset.intervalId) clearInterval(parseInt(loadingScreen.dataset.intervalId));
+        const intervalId = setInterval(() => {
+            statusEl.textContent = messages[idx]; if (messages[idx] === 'Cross-referencing…') { const stampEl = $('.loading-stamp'); if (stampEl) stampEl.classList.add('visible'); }
+            idx = (idx + 1) % messages.length;
+        }, 1000);
+        loadingScreen.dataset.intervalId = intervalId;
+
+        // Ensure the loader stays visible for at least 4 seconds
+        const elapsed = Date.now() - parseInt(loadingScreen.dataset.start);
+        const minDelay = Math.max(0, 4000 - elapsed);
+        setTimeout(() => {
+            clearInterval(intervalId);
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => loadingScreen.remove(), 500);
+        }, minDelay);
+    }
 }
 
 function toggleQuietMode() {
