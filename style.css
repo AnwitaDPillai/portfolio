@@ -472,11 +472,17 @@ body.is-dark .mode-toggle:hover {
 }
 .loading-card {
     background: var(--paper-warm);
+    box-sizing: border-box;
+    width: min(28rem, calc(100vw - 2rem));
+    min-height: 16rem;
     padding: 2rem 3rem;
     border: 1px solid var(--line);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: center;
-    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .loading-title {
     margin: 0 0 1rem;
@@ -486,16 +492,19 @@ body.is-dark .mode-toggle:hover {
 }
 .loading-status {
     margin: 0 0 0.5rem;
+    min-height: 1.5em;
     font-family: var(--mono);
     color: var(--graphite);
 }
 .loading-stamp {
+    width: 8rem;
+    height: 5rem;
+    object-fit: contain;
     opacity: 0;
     transform: scale(0.6) rotate(-10deg);
     transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
     display: block;
     margin: 1rem auto 0;
-    max-width: 8rem;
 }
 .loading-stamp.visible {
     opacity: 1;
