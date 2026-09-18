@@ -486,14 +486,14 @@ body.is-dark .mode-toggle:hover {
 }
 .loading-title {
     margin: 0 0 1rem;
-    font-family: var(--serif);
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2rem,4vw,3rem);
     color: var(--ink);
 }
 .loading-status {
     margin: 0 0 0.5rem;
     min-height: 1.5em;
-    font-family: var(--mono);
+    font-family: Consolas, "Courier New", monospace;
     color: var(--graphite);
 }
 .loading-stamp {
@@ -501,14 +501,17 @@ body.is-dark .mode-toggle:hover {
     height: 5rem;
     object-fit: contain;
     opacity: 0;
+    visibility: hidden;
     transform: scale(0.6) rotate(-10deg);
-    transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+    transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out), visibility 0s linear 0.5s;
     display: block;
     margin: 1rem auto 0;
 }
 .loading-stamp.visible {
     opacity: 1;
+    visibility: visible;
     transform: scale(1) rotate(0deg);
+    transition-delay: 0s;
 }
 
 .header-progress-bar {

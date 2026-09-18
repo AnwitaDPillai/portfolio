@@ -484,12 +484,6 @@ function hydrateSubstackFeed() {
     const container = $("[data-substack-feed]");
     if (!config || !container) return;
 
-    const fallbackArticles = [
-        { title: "On Archival Grudges and Colonial Currencies", date: "March 2026", link: config.substack.siteUrl },
-        { title: "The Material Politics of Salt and Silence", date: "February 2026", link: config.substack.siteUrl },
-        { title: "When Footnotes Become the Living Argument", date: "January 2026", link: config.substack.siteUrl }
-    ];
-
     const renderArticles = (items) => {
         container.innerHTML = items.map(item => `
             <article class="essay-card" data-cursor="READ">
@@ -504,19 +498,28 @@ function hydrateSubstackFeed() {
         `).join("");
     };
 
+    const renderFeedError = () => {
+        container.innerHTML = `
+            <p class="feed-status">${escapeHtml(config.substack.errorText)} <a href="${escapeHtml(config.substack.siteUrl)}" target="_blank" rel="noopener noreferrer">Read the latest posts on Substack ↗</a></p>
+        `;
+    };
+
     fetch(`${config.substack.rssProxy}${encodeURIComponent(config.substack.feedUrl)}`)
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) throw new Error(`Substack feed request failed: ${res.status}`);
+            return res.json();
+        })
         .then(data => {
-            const feedItems = (data.items || []).slice(0, config.substack.displayCount);
+            const feedItems = data.status === "ok"
+                ? (data.items || []).filter(item => item.title && item.link).slice(0, config.substack.displayCount)
+                : [];
             if (feedItems.length) {
                 renderArticles(feedItems);
             } else {
-                renderArticles(fallbackArticles);
+                renderFeedError();
             }
         })
-        .catch(() => {
-            renderArticles(fallbackArticles);
-        });
+        .catch(renderFeedError);
 }
 
 // 11: Contact (The Colophon)
@@ -773,7 +776,7 @@ async function finishLoadingScreen() {
     const intervalId = setInterval(() => {
         messageIndex = Math.min(messageIndex + 1, messages.length - 1);
         if (statusEl) statusEl.textContent = messages[messageIndex];
-        if (messageIndex === 2 && stampEl) stampEl.classList.add('visible');
+        if (messageIndex === messages.length - 1 && stampEl) stampEl.classList.add('visible');
     }, 1000);
 
     await Promise.all([
