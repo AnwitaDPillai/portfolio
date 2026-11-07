@@ -4,6 +4,11 @@
  * Based on agents.md specifications
  */
 
+const DATA_BASE_URL = new URL(
+  './data/',
+  document.currentScript?.src || document.baseURI
+);
+
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initSmoothScroll();
@@ -262,7 +267,7 @@ function formatSubstackDate(dateStr) {
  */
 async function fetchPublications() {
   try {
-    const response = await fetch('./data/publications.json');
+    const response = await fetch(new URL('publications.json', DATA_BASE_URL));
     if (!response.ok) {
       throw new Error(`Failed to fetch publications.json (HTTP ${response.status})`);
     }
@@ -282,7 +287,7 @@ async function fetchPublications() {
  */
 async function fetchAwards() {
   try {
-    const response = await fetch('./data/awards.json');
+    const response = await fetch(new URL('awards.json', DATA_BASE_URL));
     if (!response.ok) {
       throw new Error(`Failed to fetch awards.json (HTTP ${response.status})`);
     }
@@ -327,7 +332,7 @@ async function fetchRecentWritings() {
 
   // Resilient fallback to local ./data/writings.json
   try {
-    const response = await fetch('./data/writings.json');
+    const response = await fetch(new URL('writings.json', DATA_BASE_URL));
     if (response.ok) {
       const data = await response.json();
       const articles = data.slice(0, 5).map((item) => ({
@@ -495,7 +500,7 @@ function renderProjects(items) {
  */
 async function fetchExperience() {
   try {
-    const response = await fetch('./data/experience.json');
+    const response = await fetch(new URL('experience.json', DATA_BASE_URL));
     if (!response.ok) {
       throw new Error(`Failed to fetch experience.json (HTTP ${response.status})`);
     }
@@ -515,7 +520,7 @@ async function fetchExperience() {
  */
 async function fetchProjects() {
   try {
-    const response = await fetch('./data/projects.json');
+    const response = await fetch(new URL('projects.json', DATA_BASE_URL));
     if (!response.ok) {
       throw new Error(`Failed to fetch projects.json (HTTP ${response.status})`);
     }
