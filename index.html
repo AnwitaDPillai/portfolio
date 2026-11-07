@@ -1,335 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anwita D Pillai — Digital Archive &amp; Portfolio</title>
-    <meta name="description" content="Anwita D Pillai — Writer, historian, and independent researcher building public scholarship across history, technology, science, and policy.">
-    <meta name="author" content="Anwita D Pillai">
-    
-    <!-- Open Graph / Meta -->
-    <meta property="og:title" content="Anwita D Pillai — Writer, Historian, Building Public Scholarship">
-    <meta property="og:description" content="An archival portfolio of research, monographs, essays, policy, and interactive systems.">
-    <meta property="og:url" content="https://anwitadpillai.github.io/portfolio/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://anwitadpillai.github.io/portfolio/assets/brand/favicon.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Anwita D Pillai monogram">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Anwita D Pillai — Writer, Historian, Building Public Scholarship">
-    <meta name="twitter:description" content="An archival portfolio of research, monographs, essays, policy, and interactive systems.">
-    <meta name="twitter:image" content="https://anwitadpillai.github.io/portfolio/assets/brand/favicon.png">
-    <meta name="twitter:image:alt" content="Anwita D Pillai monogram">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anwita D Pillai — Portfolio</title>
+  <meta name="description" content="Personal portfolio and research archive of Anwita D Pillai.">
 
-    <!-- Fonts: Estonia (distressed hand notes), Instrument Sans, Instrument Serif, IBM Plex Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Estonia&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <!-- modern-normalize for cross-browser consistency -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
 
-    <!-- Styles & CDNs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.css">
-    <link rel="stylesheet" href="style.css?v=20260918">
-    <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <!-- Google Fonts: Newsreader, Space Grotesk, Estonia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Estonia&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400;1,6..72,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-mode="immersive">
-  <div id="loading-screen" class="loading-screen">
-    <div class="loading-card">
-      <h2 class="loading-title">Anwita’s Archive</h2>
-      <p class="loading-status" data-status>Cataloguing…</p>
-      <img class="loading-stamp" src="assets/brand/red‑stamp.png" alt="Accessed">
-
-    </div>
-  </div>
-    <!-- Screen reader skip link -->
-    <a href="#main-content" class="skip-link">Skip to main archive content</a>
-
-    <!-- Custom Magnetic Cursor -->
-    <div class="cursor" data-cursor aria-hidden="true" hidden>
-        <span class="cursor-crosshair"></span>
-        <span class="cursor-label" data-cursor-label>READ</span>
-    </div>
-
-    <!-- Sticky Sleek Header & Integrated Progress -->
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="#cover" class="header-brand" data-cursor="ARCHIVE">
-                <span class="brand-title">Anwita D Pillai <span class="brand-sub">· Archive</span></span>
-            </a>
-            <div class="header-controls">
-                <span class="header-index" data-nav-index>01 / 11 · OPENING</span>
-                <button type="button" class="mode-toggle" data-mode-toggle aria-pressed="false" data-cursor="TOGGLE">
-                    <span class="mode-label">Quiet Mode</span>
-                </button>
-            </div>
+<body>
+  <!-- Sticky Navigation -->
+  <header class="site-header" id="header">
+    <nav class="nav-bar" aria-label="Primary Navigation">
+      <div class="nav-side nav-left">
+        <div class="nav-dropdown">
+          <a href="#publications" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            INDEX
+            <span class="nav-dropdown-arrow" aria-hidden="true">&#x25BE;</span>
+          </a>
+          <ul class="nav-dropdown-menu" role="menu" aria-label="Index Submenu">
+            <li role="none"><a href="#publications" class="nav-dropdown-item" role="menuitem">Publications</a></li>
+            <li role="none"><a href="#experience" class="nav-dropdown-item" role="menuitem">Experience</a></li>
+            <li role="none"><a href="#awards" class="nav-dropdown-item" role="menuitem">Awards</a></li>
+            <li role="none"><a href="#projects" class="nav-dropdown-item" role="menuitem">Projects</a></li>
+            <li role="none"><a href="#recent-writings" class="nav-dropdown-item" role="menuitem">Writings</a></li>
+          </ul>
         </div>
-        <div class="header-progress" aria-hidden="true">
-            <span class="header-progress-bar" data-scroll-progress></span>
-        </div>
-    </header>
-
-    <!-- Interactive Spine Navigation (11 Chapters) -->
-    <nav class="spine" aria-label="Archive Chapters">
-        <a href="#cover" data-spine="cover" data-title="Opening"><span class="spine-num">01</span><span class="spine-name">Opening</span></a>
-        <a href="#about" data-spine="about" data-title="About"><span class="spine-num">02</span><span class="spine-name">About</span></a>
-        <a href="#provenance" data-spine="provenance" data-title="Provenance"><span class="spine-num">03</span><span class="spine-name">Provenance</span></a>
-        <a href="#experience" data-spine="experience" data-title="Experience"><span class="spine-num">04</span><span class="spine-name">Experience</span></a>
-        <a href="#projects" data-spine="projects" data-title="Projects"><span class="spine-num">05</span><span class="spine-name">Projects</span></a>
-        <a href="#publications" data-spine="publications" data-title="Publications"><span class="spine-num">06</span><span class="spine-name">Publications</span></a>
-        <a href="#awards" data-spine="awards" data-title="Awards"><span class="spine-num">07</span><span class="spine-name">Awards</span></a>
-        <a href="#research" data-spine="research" data-title="Dark Archive"><span class="spine-num">08</span><span class="spine-name">Dark Archive</span></a>
-        <a href="#playground" data-spine="playground" data-title="Playground"><span class="spine-num">09</span><span class="spine-name">Playground</span></a>
-        <a href="#writing" data-spine="writing" data-title="Recent Writing"><span class="spine-num">10</span><span class="spine-name">Recent Writing</span></a>
-        <a href="#colophon" data-spine="colophon" data-title="Colophon"><span class="spine-num">11</span><span class="spine-name">Colophon</span></a>
+      </div>
+      <div class="nav-brand-container">
+        <a href="#hero" class="nav-brand" aria-label="Anwita D Pillai Home">
+          <img 
+            src="./assets/Monogram.png" 
+            alt="Anwita D Pillai Monogram" 
+            class="nav-monogram"
+            width="140" 
+            height="36"
+          >
+        </a>
+      </div>
+      <div class="nav-side nav-right">
+        <a href="#about" class="nav-link active">ABOUT</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- Main Content: The 11 Viewport Experiences -->
-    <main id="main-content">
-        <!-- 01: OPENING (The Title Page — Form-Fitted Layout) -->
-        <section id="cover" class="chapter cover" data-chapter="cover" data-index="01" data-label="OPENING">
-            <div class="cover-inner">
-                <div class="cover-meta-bar">
-                    <p class="meta" data-typewriter>ARCHIVE / 001</p>
-                    <p class="meta cover-loc">KERALA, INDIA · LIVING ARCHIVE</p>
-                </div>
-                <div class="cover-layout-grid">
-                    <div class="cover-hero">
-                        <h1 class="kinetic-title">
-                            <span class="title-line" data-cover-line>Anwita</span>
-                            <span class="title-line" data-cover-line>D Pillai</span>
-                        </h1>
-                        <p class="cover-subtitle" data-site-title></p>
-                    </div>
-                    <div class="cover-narrator">
-                        <div class="cover-mascot-wrap">
-                            <img class="cover-mascot" src="assets/mascot/base-character.png" alt="Anwita D Pillai" width="280" height="280">
-                        </div>
-                        <p class="archival-note cover-quip">Currently alphabetising footnotes.</p>
-                    </div>
-                </div>
-                <div class="cover-footer-row">
-                    <div class="cover-scroll-indicator" data-cursor="SCROLL">
-                        <span class="scroll-cue">SCROLL TO READ</span>
-                        <span class="scroll-arrow" aria-hidden="true">↓</span>
-                    </div>
-                </div>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero" aria-label="Hero Section">
+      <div class="hero-container">
+        <div class="hero-main">
+          <!-- Left Column: Character Illustration & Script Caption -->
+          <div class="hero-col hero-col-left">
+            <div class="hero-character-frame">
+              <img 
+                src="./assets/base-character.png" 
+                alt="Illustrated character of Anwita standing amidst wildflowers" 
+                class="hero-character-img"
+                width="342" 
+                height="513"
+                loading="eager"
+              >
             </div>
-        </section>
+            <p class="hero-caption">Currently alphabetising footnotes</p>
+          </div>
 
-        <!-- 02: ABOUT (The Margin) -->
-        <section id="about" class="chapter about-chapter" data-chapter="about" data-index="02" data-label="ABOUT">
-            <div class="chapter-heading">
-                <p class="meta">02 / The Margin</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">ABOUT</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-narrative">
-                    <p class="story drop-cap reveal" data-about-paragraph="0"></p>
-                    <p class="story reveal" data-about-paragraph="1"></p>
-                    <div class="poetry-wrapper reveal">
-                        <p class="poetry" data-about-poetry></p>
-                    </div>
-                    <div class="about-actions reveal">
-                        <a class="editorial-btn" data-about-cta href="https://anwitadpillai.substack.com/" target="_blank" rel="noopener noreferrer" data-cursor="ESSAYS">
-                            <span class="btn-text">Read the Substack</span>
-                            <span class="btn-arrow" aria-hidden="true">→</span>
-                        </a>
-                    </div>
-                </div>
-                <aside class="about-margin">
-                    <div class="portrait-frame reveal">
-                        <img src="assets/brand/profile-picture.jpg" alt="Anwita D Pillai" class="portrait-img">
-                        <figcaption class="portrait-caption">
-                            <span class="caption-label">FIG. 1.0 — RECORD</span>
-                            <span class="caption-text">Researcher in natural habitat, holding grudges on behalf of dead people.</span>
-                        </figcaption>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
-        <!-- 03: AFFILIATIONS (Continuous Rotating Bands) -->
-        <section id="provenance" class="chapter provenance-chapter" data-chapter="provenance" data-index="03" data-label="PROVENANCE">
-            <div class="chapter-heading">
-                <p class="meta">03 / Provenance</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">AFFILIATIONS &amp; SCHOLARSHIPS</p>
-            </div>
-            <p class="section-intro reveal">Textual provenance gathered across research fellowships, bioengineering labs, and independent institutions (pauses on hover).</p>
-            <div class="affiliation-stream" data-affiliation-bands></div>
-        </section>
-
-        <!-- 04: EXPERIENCE (The Stack) -->
-        <section id="experience" class="chapter experience-chapter" data-chapter="experience" data-index="04" data-label="EXPERIENCE">
-            <div class="chapter-heading">
-                <p class="meta">04 / The Stack</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">RESEARCH &amp; FELLOWSHIPS</p>
-            </div>
-            <p class="section-intro">Archival dossier of fellowships, quantitative labs, and qualitative inquiry.</p>
-            <div class="stacker-container" data-experience-stack></div>
-        </section>
-
-        <!-- 05: PROJECTS (The Shuffle / Sticky Cards) -->
-        <section id="projects" class="chapter projects-chapter" data-chapter="projects" data-index="05" data-label="PROJECTS">
-            <div class="chapter-heading">
-                <p class="meta">05 / The Intellectual Projects</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">MAJOR MONOGRAPHS &amp; SYSTEMS</p>
-            </div>
-            <p class="section-intro">Monographs, policy frameworks, and living research systems (stacked archival notes).</p>
-            <div class="sticky-projects-deck" data-major-projects></div>
-        </section>
-
-        <!-- 06: PUBLICATIONS (The Ledger) -->
-        <section id="publications" class="chapter publications-chapter" data-chapter="publications" data-index="06" data-label="PUBLICATIONS">
-            <div class="chapter-heading">
-                <p class="meta">06 / The Ledger</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">PUBLICATIONS</p>
-            </div>
-            <p class="section-intro">Published writing, national essays, fiction, and forthcoming anthologies.</p>
-            <div class="ledger-table" data-publications></div>
-        </section>
-
-        <!-- 07: AWARDS (The Honours Ledger) -->
-        <section id="awards" class="chapter awards-chapter" data-chapter="awards" data-index="07" data-label="AWARDS">
-            <div class="chapter-heading">
-                <p class="meta">07 / The Honours Ledger</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">HONOURS &amp; AWARDS</p>
-            </div>
-            <p class="section-intro">International recognitions, literary commendations, and Olympiads.</p>
-            <div class="ledger-table" data-awards></div>
-        </section>
-
-        <!-- 08: RESEARCH PAPERS & GRANTS (The Dark Archive) -->
-        <section id="research" class="chapter dark-archive-chapter" data-chapter="research" data-index="08" data-label="DARK ARCHIVE">
-            <div class="dark-archive-bg-glow" aria-hidden="true"></div>
-            <div class="dark-archive-bg-texture" aria-hidden="true"></div>
-            <div class="chapter-heading dark-heading">
-                <p class="meta">08 / The Dark Archive</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">WORKING PAPERS &amp; GRANTS</p>
-            </div>
-            <p class="section-intro dark-intro">Theoretical inquiry into algorithmic power, market information asymmetry, and human genres.</p>
-            <div class="dark-ledger-table" data-research-ledger></div>
-        </section>
-
-        <!-- 09: HOBBYIST PROJECTS (The Playground / Interactive Shuffling Deck) -->
-        <section id="playground" class="chapter playground-chapter" data-chapter="playground" data-index="09" data-label="PLAYGROUND">
-            <div class="chapter-heading">
-                <p class="meta">09 / The Playground</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">HOBBYIST &amp; TECHNICAL EXPERIMENTS</p>
-            </div>
-            <p class="section-intro">Interactive computational experiments, web archaeology, and localized AI roasts (click deck to shuffle projects).</p>
-            <div class="playground-deck-stage" data-experiments-stage>
-                <div class="deck-controls-bar">
-                    <span class="deck-counter" data-deck-counter>CARD 01 / 03</span>
-                    <button type="button" class="deck-shuffle-action" data-deck-shuffle data-cursor="SHUFFLE">
-                        <span>Shuffle Next Project 🗂</span>
-                    </button>
-                </div>
-                <div class="shuffling-deck-container" data-experiments-deck data-cursor="SHUFFLE"></div>
-            </div>
-        </section>
-
-        <!-- 10: RECENT WRITING (The Content Trail) -->
-        <section id="writing" class="chapter writing-chapter" data-chapter="writing" data-index="10" data-label="WRITING">
-            <div class="chapter-heading">
-                <p class="meta">10 / The Content Trail</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">RECENT WRITING &amp; ESSAYS</p>
-            </div>
-            <div class="writing-meta-row">
-                <p class="section-intro">Dispatches from Substack — public history, archival grudges, and cultural analysis.</p>
-                <a href="https://anwitadpillai.substack.com/" target="_blank" rel="noopener noreferrer" class="substack-badge" data-cursor="OPEN">
-                    <span>Subscribe on Substack ↗</span>
-                </a>
-            </div>
-            <div class="substack-feed-container" data-substack-feed>
-                <p class="feed-status" data-feed-status>Loading recent essays from the wire...</p>
-            </div>
-        </section>
-
-        <!-- 11: CONTACT (The Colophon) -->
-        <section id="colophon" class="chapter colophon-chapter" data-chapter="colophon" data-index="11" data-label="COLOPHON">
-            <div class="chapter-heading">
-                <p class="meta">11 / The Colophon</p>
-                <i class="rule-line" aria-hidden="true"></i>
-                <p class="meta">CONTACT &amp; PROVENANCE</p>
-            </div>
-            <div class="colophon-grid">
-                <div class="colophon-main">
-                    <h2 class="colophon-heading" data-contact-heading>Get In Touch</h2>
-                    <p class="contact-body" data-contact-body></p>
-                    <p class="contact-secondary" data-contact-secondary></p>
-                    
-                    <div class="colophon-cta-row">
-                        <a class="colophon-button" data-contact-email href="mailto:anwitadpillai007@gmail.com" data-cursor="WRITE">
-                            <span class="btn-text">Say Hello!</span>
-                            <span class="btn-paper-seal" aria-hidden="true">✉</span>
-                        </a>
-                        <span class="email-direct">anwitadpillai007@gmail.com</span>
-                    </div>
-
-                    <div class="colophon-socials" data-contact-links></div>
-
-                    <blockquote class="colophon-quote">
-                        <p class="quote-body" data-quote-text></p>
-                        <cite class="quote-author" data-quote-author></cite>
-                    </blockquote>
-                </div>
-                <div class="colophon-aside-centre">
-                    <img src="assets/mascot/smiling-chin-on-palm.png" alt="Anwita D Pillai Mascot" class="colophon-mascot">
-                    <p class="archival-note">Stay tuned for more!</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Site Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p class="footer-meta" data-footer-text>Set in digital ink. Powered by raw code.</p>
-            <p class="footer-provenance">ANWITA D PILLAI ARCHIVE · 2026</p>
+          <!-- Right Column: Massive Name, Red Redaction Line & Tagline -->
+          <div class="hero-col hero-col-right">
+            <h1 class="hero-name">
+              <span class="hero-name-line">Anwita</span>
+              <span class="hero-name-line">D Pillai</span>
+            </h1>
+            <div class="hero-red-line" aria-hidden="true"></div>
+            <p class="hero-tagline">I make the familiar strange.</p>
+          </div>
         </div>
-    </footer>
 
-    <!-- Archival Image / Artifact Popup Modal (Rich, deliberate easing) -->
-    <div id="artifact-modal" class="artifact-modal" aria-hidden="true" role="dialog" aria-modal="true" hidden>
-        <div class="modal-backdrop" data-modal-close></div>
-        <div class="modal-dialog">
-            <div class="modal-header">
-                <span class="modal-plate-tag" id="modal-tag">ARCHIVAL PLATE</span>
-                <button type="button" class="modal-close-btn" data-modal-close aria-label="Close artifact viewer">✕ Close</button>
-            </div>
-            <div class="modal-image-wrapper">
-                <img src="" alt="" id="modal-image" class="modal-img">
-            </div>
-            <div class="modal-caption-area">
-                <h4 class="modal-title" id="modal-title"></h4>
-                <p class="modal-subtitle" id="modal-subtitle"></p>
-            </div>
+        <!-- Red Down Arrow -->
+        <div class="hero-footer-arrow">
+          <a href="#about" class="hero-arrow-btn" aria-label="Scroll down to About section">
+            <svg 
+              class="hero-arrow-svg" 
+              width="38" 
+              height="52" 
+              viewBox="0 0 38 52" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg" 
+              aria-hidden="true"
+            >
+              <line x1="19" y1="2" x2="19" y2="48" stroke="#BF3928" stroke-width="2.5" stroke-linecap="round"/>
+              <polyline points="4,33 19,48 34,33" stroke="#BF3928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about" aria-label="About Section">
+      <div class="about-container">
+        <!-- Left Column: Narrative, Gold Highlights, Poetry Quote & Substack CTA -->
+        <div class="about-col-left">
+          <p class="about-intro">
+            I’m the kind of person who reads <span class="highlight-gold" data-highlight-index="1">footnotes</span> for fun and holds grudges on behalf of dead people.
+          </p>
+
+          <div class="about-body">
+            <p class="about-paragraph">
+              I got into archives because I was nosy about the <span class="highlight-gold" data-highlight-index="2">wrong things</span>.
+            </p>
+            <p class="about-paragraph">
+              I’m currently building a <span class="highlight-gold" data-highlight-index="3">Substack</span> because I believe rigorous history should be as readable as a good grudge, and finishing a <span class="highlight-gold" data-highlight-index="4">monograph</span> because I started it and I’m stubborn.
+            </p>
+          </div>
+
+          <blockquote class="about-quote-box">
+            <div class="about-quote-bar" aria-hidden="true"></div>
+            <p class="about-quote-text">
+              I also write poetry, which is just history with the citations removed.
+            </p>
+          </blockquote>
+
+          <div class="about-cta-container">
+            <a 
+              href="https://anwitadpillai.substack.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="about-substack-link"
+            >
+              READ THE SUBSTACK
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile Photo in HUD Overlay Frame -->
+        <div class="about-col-right">
+          <div class="about-photo-wrapper">
+            <div class="about-photo-frame">
+              <img 
+                src="./assets/profile-picture.jpg" 
+                alt="Portrait of Anwita D Pillai in a mountain setting" 
+                class="about-photo-img"
+                width="275" 
+                height="399"
+                loading="lazy"
+              >
+            </div>
+            <p class="about-photo-caption">Researcher in natural habitat.</p>
+            <img 
+              src="./assets/Minimalist Futuristic HUD Frame Overlay.png" 
+              alt="" 
+              class="about-hud-overlay"
+              aria-hidden="true"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Index Anchor for Navigation -->
+    <div id="index" class="section-anchor-target" aria-hidden="true"></div>
+
+    <!-- Publications Section -->
+    <section class="table-section" id="publications" aria-label="Publications">
+      <div class="table-container">
+        <h2 class="section-title">Publications</h2>
+        <div class="archival-table cols-equal" id="publications-table" role="table" aria-label="Publications Table">
+          <div class="table-header table-row" role="row">
+            <div class="table-cell table-header-cell" role="columnheader">TITLE</div>
+            <div class="table-cell table-header-cell" role="columnheader">PUBLISHER</div>
+          </div>
+          <div class="table-body" id="publications-body" role="rowgroup">
+            <!-- Dynamically populated from publications.json -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="table-section" id="awards" aria-label="Awards">
+      <div class="table-container">
+        <h2 class="section-title">Awards</h2>
+        <div class="archival-table cols-wide-narrow" id="awards-table" role="table" aria-label="Awards Table">
+          <div class="table-header table-row" role="row">
+            <div class="table-cell table-header-cell" role="columnheader">HONOUR</div>
+            <div class="table-cell table-header-cell" role="columnheader">YEAR</div>
+          </div>
+          <div class="table-body" id="awards-body" role="rowgroup">
+            <!-- Dynamically populated from awards.json -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Writings Section -->
+    <section class="table-section" id="recent-writings" aria-label="Recent Writings">
+      <div class="table-container">
+        <h2 class="section-title">Recent Writings</h2>
+        <div class="archival-table cols-single" id="writings-table" role="table" aria-label="Recent Writings List">
+          <div class="table-body" id="writings-body" role="rowgroup">
+            <!-- Dynamically populated via Substack API: single title column -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="experience" aria-label="Experience">
+      <div class="experience-container">
+        <h2 class="section-title">Experience</h2>
+        <div class="accordion-list" id="experience-accordion" role="region" aria-label="Experience Accordion">
+          <!-- Dynamically populated from experience.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects" aria-label="Projects">
+      <div class="projects-container">
+        <h2 class="section-title">Projects</h2>
+        <div class="marquee-wrapper">
+          <div class="marquee-track" id="projects-deck" role="region" aria-label="Projects Filmstrip">
+            <!-- Dynamically populated from projects.json -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="project-description-dialog" id="project-description-dialog" aria-labelledby="project-dialog-title">
+    <div class="project-dialog-header">
+      <p class="project-dialog-label">PROJECT DOSSIER</p>
+      <button class="project-dialog-close" type="button" aria-label="Close project description" autofocus>&times;</button>
     </div>
+    <h2 class="project-dialog-title" id="project-dialog-title"></h2>
+    <p class="project-dialog-description"></p>
+  </dialog>
 
-    <!-- Libraries & Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <!-- Site Footer: Get in Touch -->
+  <footer class="site-footer" id="contact" aria-label="Get in Touch">
+    <div class="footer-container">
+      <div class="footer-main">
+        <!-- Left Column: Heading, Subtext, Social Links, Button, Copyright -->
+        <div class="footer-col-left">
+          <h2 class="footer-heading">
+            <span class="footer-heading-line">Get in</span>
+            <span class="footer-heading-line">Touch</span>
+          </h2>
 
-    <!-- Canonical Data (Strictly Read-Only) -->
-    <script src="data/site-config.js"></script>
-    <script src="data/affiliations.js"></script>
-    <script src="data/experience.js"></script>
-    <script src="data/projects.js"></script>
-    <script src="data/publications.js"></script>
-    <script src="data/awards.js"></script>
-    <script src="data/research.js"></script>
+          <p class="footer-subtext">
+            My inbox is a no-judgement zone (unless you use Comic Sans).
+          </p>
 
-    <!-- Application Script -->
-    <script src="script.js"></script>
+          <p class="footer-social-text">
+            You can also find me on 
+            <a href="https://github.com/AnwitaDPillai" target="_blank" rel="noopener noreferrer" class="footer-inline-link">GitHub</a>, 
+            <a href="https://www.linkedin.com/in/anwita-d-pillai/" target="_blank" rel="noopener noreferrer" class="footer-inline-link">LinkedIn</a>, and 
+            <a href="https://www.instagram.com/nirmaathri/" target="_blank" rel="noopener noreferrer" class="footer-inline-link">Instagram</a>.
+          </p>
+
+          <div class="footer-cta-wrap">
+            <a href="mailto:anwitadpillai007@gmail.com" class="footer-cta-btn">SAY HELLO!</a>
+          </div>
+
+          <p class="footer-copyright">
+            &copy; 2026 Anwita D. Pillai. All rights reserved. Set in digital ink. Powered by raw code.
+          </p>
+        </div>
+
+        <!-- Right Column: Mascot Illustration leaning forward -->
+        <div class="footer-col-right">
+          <div class="footer-character-frame">
+            <img 
+              src="./assets/smile-me-leaning-forward.png" 
+              alt="Illustrated character of Anwita smiling and leaning forward" 
+              class="footer-character-img"
+              width="648"
+              height="432"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

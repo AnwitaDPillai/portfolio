@@ -1,0 +1,359 @@
+/* ==========================================================================
+   404 ERROR PAGE STYLESHEET
+   Project: Anwita D Pillai Portfolio
+   Archival Artifact Not Found Page
+   ========================================================================== */
+
+:root {
+  --color-canvas: #F1EFE9;
+  --color-ink: #161614;
+  --color-redaction: #BF3928;
+  --color-archive: #C5A059;
+
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* ==========================================================================
+   ARCHIVAL REGISTRATION CORNER BRACKETS
+   Red squares (#BF3928) with 1px black intersecting grid lines
+   ========================================================================== */
+
+.archival-corner {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.corner-top-left {
+  top: 18px;
+  left: 18px;
+}
+
+.corner-top-right {
+  top: 18px;
+  right: 18px;
+}
+
+.corner-bottom-left {
+  bottom: 18px;
+  left: 18px;
+}
+
+.corner-bottom-right {
+  bottom: 18px;
+  right: 18px;
+}
+
+.corner-square {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-redaction);
+}
+
+.corner-top-left .corner-square {
+  top: 10px;
+  left: 10px;
+}
+
+.corner-top-right .corner-square {
+  top: 10px;
+  right: 10px;
+}
+
+.corner-bottom-left .corner-square {
+  bottom: 10px;
+  left: 10px;
+}
+
+.corner-bottom-right .corner-square {
+  bottom: 10px;
+  right: 10px;
+}
+
+.corner-line-h {
+  position: absolute;
+  width: 59px;
+  height: 1px;
+  background-color: var(--color-ink);
+}
+
+.corner-top-left .corner-line-h { top: 0; left: 0; }
+.corner-top-right .corner-line-h { top: 0; right: 0; }
+.corner-bottom-left .corner-line-h { bottom: 0; left: 0; }
+.corner-bottom-right .corner-line-h { bottom: 0; right: 0; }
+
+.corner-line-v {
+  position: absolute;
+  width: 1px;
+  height: 59px;
+  background-color: var(--color-ink);
+}
+
+.corner-top-left .corner-line-v { top: 0; left: 0; }
+.corner-top-right .corner-line-v { top: 0; right: 0; }
+.corner-bottom-left .corner-line-v { bottom: 0; left: 0; }
+.corner-bottom-right .corner-line-v { bottom: 0; right: 0; }
+
+/* ==========================================================================
+   MAIN 404 CONTENT CONTAINER
+   Vertically & horizontally centered Flexbox layout
+   ========================================================================== */
+
+.notfound-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vh, 4rem) clamp(1.5rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   MASSIVE 404 & TEXTURED RED PAINT STRIKE-THROUGH
+   Newsreader 700 400px with textured #BF3928 banner
+   ========================================================================== */
+
+.notfound-number-wrap {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  margin-bottom: clamp(0.5rem, 2vh, 1.5rem);
+}
+
+.notfound-number {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(140px, 25vw, 400px);
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  color: var(--color-ink);
+  display: block;
+}
+
+/* Redaction strike-through banner across 404 */
+.strike-bar-wrap {
+  position: absolute;
+  top: 50%;
+  left: -8%;
+  width: 116%;
+  height: clamp(35px, 6vw, 72px);
+  transform: translateY(-50%) rotate(-0.35deg);
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.strike-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* ==========================================================================
+   ORNATE GOLD VINTAGE PLAQUE FRAME
+   Scalable archival frame holding historical failure copy
+   ========================================================================== */
+
+.plaque-frame-box {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  aspect-ratio: 2169 / 725;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: clamp(0.75rem, 2vh, 1.75rem) 0 clamp(1.75rem, 3.5vh, 2.75rem);
+  padding: 0 clamp(2.5rem, 8vw, 6.5rem);
+}
+
+.plaque-frame-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.plaque-text-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 860px;
+  width: 100%;
+  margin-top: 1.5%;
+}
+
+.plaque-heading {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(17px, 2.3vw, 35px);
+  line-height: 1.25;
+  color: var(--color-ink);
+  margin: 0 0 clamp(0.4rem, 1vh, 0.9rem) 0;
+  cursor: default;
+}
+
+.plaque-subheading {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(13px, 1.55vw, 24px);
+  line-height: 1.45;
+  color: var(--color-ink);
+  margin: 0;
+  max-width: 820px;
+}
+
+.desktop-break {
+  display: inline;
+}
+
+/* ==========================================================================
+   [ GO HOME ] BUTTON
+   Space Grotesk, 3px solid #C5A059 border
+   ========================================================================== */
+
+.notfound-cta-wrap {
+  margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
+}
+
+.go-home-btn {
+  display: inline-block;
+  padding: clamp(0.75rem, 1.6vh, 1.1rem) clamp(2rem, 3.5vw, 2.75rem);
+  font-family: var(--font-sans);
+  font-size: clamp(18px, 1.9vw, 26px);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+  border: 3px solid var(--color-archive);
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.go-home-btn:hover {
+  background-color: var(--color-archive);
+  color: var(--color-canvas);
+  transform: translateY(-2px);
+}
+
+.go-home-btn:focus-visible {
+  outline: 2px dashed var(--color-archive);
+  outline-offset: 4px;
+}
+
+/* ==========================================================================
+   COPYRIGHT FOOTNOTE
+   ========================================================================== */
+
+.notfound-copyright {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(12px, 1vw, 15px);
+  line-height: 1.5;
+  color: var(--color-ink);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (< 768px and < 480px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .notfound-container {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .archival-corner {
+    width: 45px;
+    height: 45px;
+  }
+
+  .corner-square {
+    width: 14px;
+    height: 14px;
+  }
+
+  .corner-line-h {
+    width: 40px;
+  }
+
+  .corner-line-v {
+    height: 40px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .plaque-frame-box {
+    aspect-ratio: auto;
+    min-height: 170px;
+    padding: 2rem 1.5rem;
+  }
+
+  .plaque-heading {
+    font-size: 16px;
+    margin-bottom: 0.4rem;
+  }
+
+  .plaque-subheading {
+    font-size: 13px;
+  }
+}

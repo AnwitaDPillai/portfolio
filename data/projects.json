@@ -1,0 +1,38 @@
+[
+  {
+    "name": "The Ledger",
+    "description": "An interactive archive of effort. The Ledger is a data visualization of every competition, fellowship, application, and program I've submitted to since 2024 (including some of my older works since 2017) — wins, losses, pending results, and the ones that went quiet. It tracks ~100 entries across the years, rendered as a scroll-driven mountain range: wins as peaks, losses as valleys, pending results as stars still in flight.",
+    "link": "https://anwitadpillai.github.io/the-ledger/",
+    "image": ""
+  },
+  {
+    "name": "Nethernet",
+    "description": "A high-performance 3D visualisation engine that maps the history of the 'dead internet', including the forums, MMOs, personal homepages, and hosting platforms that defined the early web but have since faded into the void.",
+    "link": "https://nethernet.vercel.app",
+    "image": ""
+  },
+  {
+    "name": "Offtrack",
+    "description": "An AI-powered diagnostic tool that turns your Spotify listening history into a brutally honest, visually arresting self-portrait. Upload your Extended Streaming History and receive your Aux Risk Score, Listening Era, and a personalised roast—all processed locally, with zero data storage. Built with React, Node.js, and the Groq API.",
+    "link": "https://anwitadpillai.github.io/offtrack/",
+    "image": ""
+  },
+  {
+    "name": "Phenotype",
+    "description": "An evolutionary agent-based macro-economy. By mapping spatial movement onto an evaporating biochemical landscape, it models the structural emergence of cooperation under non-linear resource constraints, institutional policies, and genetic mutation vectors.",
+    "link": "https://anwitadpillai.github.io/phenotype-abm/",
+    "image": ""
+  },
+  {
+    "name": "The Backwaters Terminal",
+    "description": "A weekly log of my journey as a researcher, writer, and builder. Everything from research to AI projects to the things I'm still trying to figure out.",
+    "link": "https://research-log-delta.vercel.app",
+    "image": ""
+  },
+  {
+    "name": "Gold as Grammar",
+    "description": "A 100,000-word feminist historiography examining how women in colonial South Asia used material objects such as gold, salt, and cloth as grammars of political refusal.",
+    "link": "https://anwitadpillai.substack.com/",
+    "image": ""
+  }
+]
