@@ -112,44 +112,22 @@ body {
 }
 
 /* ==========================================================================
-   MASSIVE 404 & IMAGE STRIKE-THROUGH
+   NEW 404 IMAGE (Replacing text & CSS strike-through)
    ========================================================================== */
 
-.notfound-number-wrap {
-  position: relative;
+.notfound-image-wrap {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
-.notfound-number {
-  font-family: var(--font-serif);
-  font-style: normal;
-  font-weight: 700;
-  font-size: clamp(120px, 35vh, 400px); /* Scales precisely to viewport height */
-  line-height: 0.8;
-  letter-spacing: -0.06em;
-  color: var(--color-ink);
+.notfound-image {
+  width: auto;
+  max-width: 90vw;
+  max-height: 35vh; /* Prevents it from pushing the plaque off-screen */
+  object-fit: contain;
   display: block;
-  margin: 0;
-}
-
-/* Image Strike-through */
-.strike-bar-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 110vw;
-  max-width: 1200px;
-  height: clamp(20px, 5.5vh, 60px); /* 60px at standard desktop height */
-  background-image: url('./assets/image404.png'); /* Using your asset */
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translate(-50%, -50%) rotate(-0.35deg);
-  pointer-events: none;
-  z-index: 2;
 }
 
 /* ==========================================================================
@@ -296,16 +274,15 @@ body {
   .corner-line-h { width: 38px; }
   .corner-line-v { height: 38px; }
 
-  .strike-bar-wrap {
-    height: clamp(15px, 4vh, 40px);
-    width: 120vw;
+  .notfound-image {
+    max-height: 25vh; /* Scales down slightly on mobile so everything fits */
   }
 
   .plaque-frame-box {
     aspect-ratio: auto;
     min-height: 200px;
     padding: 2.5rem 1.5rem;
-    background: url('Ornate Gold Vintage Plaque Frame.png') center/100% 100% no-repeat;
+    background: url('./assets/Ornate Gold Vintage Plaque Frame.png') center/100% 100% no-repeat;
   }
 
   .plaque-frame-img {
