@@ -960,6 +960,9 @@ h3:hover::after {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: inline-block;
   user-select: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-left: 0.75rem;
 }
 
 .accordion-item.is-open .accordion-icon {
@@ -1522,9 +1525,45 @@ h3:hover::after {
     margin-bottom: 1.75rem;
   }
 
-  /* Hide table header row per Task 3 */
+  /* Keep a compact combined label above the stacked mobile rows. */
   .table-header {
+    display: flex;
+    padding: 1.25rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .table-header .table-header-cell {
     display: none;
+    width: 100%;
+    padding: 0;
+    border-right: none;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  #publications-table .table-header .table-header-cell:first-child,
+  #awards-table .table-header .table-header-cell:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  #publications-table .table-header .table-header-cell:first-child {
+    font-size: 0;
+  }
+
+  #publications-table .table-header .table-header-cell:first-child::after {
+    content: 'TITLE // PUBLISHER';
+    font-size: 18px;
+  }
+
+  #awards-table .table-header .table-header-cell:first-child {
+    font-size: 0;
+  }
+
+  #awards-table .table-header .table-header-cell:first-child::after {
+    content: 'HONOUR // YEAR';
+    font-size: 18px;
   }
 
   /* Stack CSS Grid rows vertically into clean card/list items */
@@ -1609,7 +1648,7 @@ h3:hover::after {
   .marquee-track {
     flex-direction: row;
     flex-wrap: nowrap;
-    animation: none;
+    animation: marquee 30s linear infinite;
     overflow-x: auto;
     width: max-content;
     padding: 0 1.25rem 0.5rem;
