@@ -1,262 +1,180 @@
 /* ==========================================================================
-   404 ERROR PAGE — RESPONSIVE STYLESHEET
-   Project: Anwita D. Pillai Portfolio
-   Fluid across desktop, laptop, tablet and mobile viewports.
+   404 ERROR PAGE STYLESHEET
+   Project: Anwita D Pillai Portfolio
+   Archival Artifact Not Found Page (Dynamic Viewport Fit)
    ========================================================================== */
 
 :root {
-  color-scheme: light;
   --color-canvas: #F1EFE9;
   --color-ink: #161614;
   --color-redaction: #BF3928;
   --color-archive: #C5A059;
 
   --font-serif: 'Newsreader', Georgia, serif;
-  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  --page-gutter: clamp(1rem, 4.5vw, 4rem);
-  --corner-offset: clamp(0.625rem, 1.25vw, 1.125rem);
-  --corner-size: clamp(2.75rem, 4.85vw, 4.375rem);
-  --corner-line: clamp(2.25rem, 4.1vw, 3.6875rem);
-  --corner-square: clamp(0.875rem, 1.4vw, 1.25rem);
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-html {
-  min-width: 320px;
-  min-height: 100%;
-  background: var(--color-canvas);
-}
-
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  min-height: 100svh;
+html, body {
   margin: 0;
   padding: 0;
-  background: var(--color-canvas);
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* ==========================================================================
-   REGISTRATION MARKS
-   Fixed to the viewport; their dimensions scale with the screen.
+   ARCHIVAL REGISTRATION CORNER BRACKETS
+   Red squares (#BF3928) with 1px black intersecting grid lines
    ========================================================================== */
 
 .archival-corner {
   position: fixed;
-  z-index: 50;
-  width: var(--corner-size);
-  height: var(--corner-size);
+  width: 80px;
+  height: 80px;
   pointer-events: none;
+  z-index: 50;
 }
 
-.corner-top-left {
-  top: var(--corner-offset);
-  left: var(--corner-offset);
-}
-
-.corner-top-right {
-  top: var(--corner-offset);
-  right: var(--corner-offset);
-}
-
-.corner-bottom-left {
-  bottom: var(--corner-offset);
-  left: var(--corner-offset);
-}
-
-.corner-bottom-right {
-  right: var(--corner-offset);
-  bottom: var(--corner-offset);
-}
+.corner-top-left { top: 20px; left: 20px; }
+.corner-top-right { top: 20px; right: 20px; }
+.corner-bottom-left { bottom: 20px; left: 20px; }
+.corner-bottom-right { bottom: 20px; right: 20px; }
 
 .corner-square {
   position: absolute;
-  width: var(--corner-square);
-  height: var(--corner-square);
-  background: var(--color-redaction);
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-redaction);
 }
 
-.corner-top-left .corner-square {
-  top: 10px;
-  left: 10px;
-}
-
-.corner-top-right .corner-square {
-  top: 10px;
-  right: 10px;
-}
-
-.corner-bottom-left .corner-square {
-  bottom: 10px;
-  left: 10px;
-}
-
-.corner-bottom-right .corner-square {
-  right: 10px;
-  bottom: 10px;
-}
-
-.corner-line-h,
-.corner-line-v {
-  position: absolute;
-  background: var(--color-ink);
-}
+.corner-top-left .corner-square { top: 10px; left: 10px; }
+.corner-top-right .corner-square { top: 10px; right: 10px; }
+.corner-bottom-left .corner-square { bottom: 10px; left: 10px; }
+.corner-bottom-right .corner-square { bottom: 10px; right: 10px; }
 
 .corner-line-h {
-  width: var(--corner-line);
+  position: absolute;
+  width: 60px;
   height: 1px;
+  background-color: var(--color-ink);
 }
+
+.corner-top-left .corner-line-h { top: 0; left: 0; }
+.corner-top-right .corner-line-h { top: 0; right: 0; }
+.corner-bottom-left .corner-line-h { bottom: 0; left: 0; }
+.corner-bottom-right .corner-line-h { bottom: 0; right: 0; }
 
 .corner-line-v {
+  position: absolute;
   width: 1px;
-  height: var(--corner-line);
+  height: 60px;
+  background-color: var(--color-ink);
 }
 
-.corner-top-left .corner-line-h {
-  top: 0;
-  left: 0;
-}
-
-.corner-top-right .corner-line-h {
-  top: 0;
-  right: 0;
-}
-
-.corner-bottom-left .corner-line-h {
-  bottom: 0;
-  left: 0;
-}
-
-.corner-bottom-right .corner-line-h {
-  right: 0;
-  bottom: 0;
-}
-
-.corner-top-left .corner-line-v {
-  top: 0;
-  left: 0;
-}
-
-.corner-top-right .corner-line-v {
-  top: 0;
-  right: 0;
-}
-
-.corner-bottom-left .corner-line-v {
-  bottom: 0;
-  left: 0;
-}
-
-.corner-bottom-right .corner-line-v {
-  right: 0;
-  bottom: 0;
-}
+.corner-top-left .corner-line-v { top: 0; left: 0; }
+.corner-top-right .corner-line-v { top: 0; right: 0; }
+.corner-bottom-left .corner-line-v { bottom: 0; left: 0; }
+.corner-bottom-right .corner-line-v { bottom: 0; right: 0; }
 
 /* ==========================================================================
-   MAIN LAYOUT
-   The page can grow beyond the viewport; content is never vertically clipped.
+   MAIN 404 CONTENT CONTAINER (Dynamic Flex Layout)
    ========================================================================== */
 
 .notfound-container {
-  width: min(100%, 1440px);
-  min-height: 100vh;
-  min-height: 100svh;
-  margin-inline: auto;
-  padding:
-    clamp(4.5rem, 7.8svh, 5rem)
-    var(--page-gutter)
-    clamp(1.5rem, 3svh, 2rem);
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  padding: 4vh 4vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  text-align: center;
+  justify-content: center;
+  gap: 3vh; /* Dynamic spacing between major blocks */
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 /* ==========================================================================
-   404 NUMBER AND REDACTION MARK
-   Scales with viewport width but is capped to avoid oversized typography.
+   MASSIVE 404 & TEXTURED RED PAINT STRIKE-THROUGH
    ========================================================================== */
 
 .notfound-number-wrap {
   position: relative;
-  display: inline-block;
-  max-width: 100%;
-  margin: 0 0 clamp(1.5rem, 3.7svh, 2.375rem);
-  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .notfound-number {
-  display: block;
   font-family: var(--font-serif);
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(8.75rem, 27.8vw, 25rem);
-  line-height: 0.75;
+  font-size: clamp(120px, 35vh, 400px); /* Scales precisely to viewport height */
+  line-height: 0.8;
   letter-spacing: -0.06em;
   color: var(--color-ink);
-  white-space: nowrap;
+  display: block;
+  margin: 0;
 }
 
+/* The Figma Strike-through (Solid 60px block, rotated) */
 .strike-bar-wrap {
   position: absolute;
-  z-index: 2;
-  top: 62%;
-  left: -8%;
-  width: 116%;
-  height: clamp(2rem, 5vw, 4.5rem);
-  display: flex;
-  align-items: center;
-  transform: translateY(-50%) rotate(-0.35deg);
+  top: 50%;
+  left: 50%;
+  width: 110vw;
+  max-width: 1200px;
+  height: clamp(20px, 5.5vh, 60px); /* 60px at standard desktop height */
+  background-color: var(--color-redaction);
+  transform: translate(-50%, -50%) rotate(-0.35deg);
   pointer-events: none;
-}
-
-.strike-svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
+  z-index: 2;
+  border-radius: 2px;
 }
 
 /* ==========================================================================
-   ORNATE PLAQUE
-   The image keeps its original proportions at every width.
+   ORNATE GOLD VINTAGE PLAQUE FRAME
    ========================================================================== */
 
 .plaque-frame-box {
   position: relative;
+  width: 100%;
+  max-width: 1170px;
+  aspect-ratio: 1170 / 391; /* Figma exact aspect ratio */
+  max-height: 40vh; /* Prevent the plaque from taking over the whole screen */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 73.125rem; /* 1170px Figma reference width */
-  aspect-ratio: 2169 / 725;
-  margin: 0 0 clamp(1.25rem, 2.35svh, 1.5rem);
-  padding: 0 clamp(2rem, 8vw, 7.1875rem);
+  padding: 0 clamp(2rem, 8vw, 6rem);
 }
 
 .plaque-frame-img {
   position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: block;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: fill;
   pointer-events: none;
+  z-index: 1;
 }
 
 .plaque-text-content {
@@ -266,31 +184,30 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 53.75rem;
-  margin-top: 1.5%;
   text-align: center;
+  width: 100%;
+  margin-top: 1%; /* Optical alignment to center within the frame's safe area */
 }
 
 .plaque-heading {
-  margin: 0 0 clamp(0.75rem, 3.8svh, 2.4375rem);
-  color: var(--color-ink);
   font-family: var(--font-serif);
-  font-size: clamp(1.125rem, 2.43vw, 2.1875rem);
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
-  line-height: 1.15;
+  font-size: clamp(18px, 3.5vh, 35px); /* Figma: 35px */
+  line-height: 1.2;
+  color: var(--color-ink);
+  margin: 0 0 1.5vh 0;
 }
 
 .plaque-subheading {
-  max-width: 64.375rem;
-  margin: 0;
-  color: var(--color-ink);
   font-family: var(--font-serif);
-  font-size: clamp(0.875rem, 1.74vw, 1.5625rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.3;
+  font-size: clamp(14px, 2.5vh, 25px); /* Figma: 25px */
+  line-height: 1.4;
+  color: var(--color-ink);
+  margin: 0;
+  max-width: 1000px;
 }
 
 .desktop-break {
@@ -298,43 +215,38 @@ body {
 }
 
 /* ==========================================================================
-   HOME BUTTON
+   [ GO HOME ] BUTTON (Exact Figma Dimensions)
    ========================================================================== */
 
 .notfound-cta-wrap {
-  margin: 0 0 clamp(1.5rem, 5.1svh, 3.25rem);
+  display: flex;
+  justify-content: center;
 }
 
 .go-home-btn {
-  display: inline-flex;
-  min-width: clamp(12.5rem, 17.7vw, 15.9375rem);
-  min-height: clamp(3.5rem, 7.4svh, 4.75rem);
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.875rem clamp(1.5rem, 3vw, 1.875rem);
-  border: 3px solid var(--color-archive);
-  border-radius: 5px;
-  background: var(--color-canvas);
-  color: var(--color-ink);
+  width: 255px; /* Figma exact width */
+  height: 76px; /* Figma exact height */
   font-family: var(--font-sans);
-  font-size: clamp(1rem, 2.08vw, 1.875rem);
+  font-size: 30px; /* Figma exact font size */
   font-weight: 400;
   letter-spacing: 0.1em;
-  line-height: 1.25;
-  text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+  border: 3px solid var(--color-archive);
+  border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .go-home-btn:hover {
-  transform: translateY(-2px);
-  background: var(--color-archive);
+  background-color: var(--color-archive);
   color: var(--color-canvas);
+  transform: translateY(-2px);
 }
 
 .go-home-btn:focus-visible {
@@ -343,230 +255,74 @@ body {
 }
 
 /* ==========================================================================
-   COPYRIGHT
-   Pushed down on tall screens, but remains in normal flow on short screens.
+   COPYRIGHT FOOTNOTE
    ========================================================================== */
 
 .notfound-copyright {
-  margin: auto 0 0;
-  color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: clamp(0.6875rem, 1vw, 0.9375rem);
+  font-style: normal;
   font-weight: 400;
+  font-size: clamp(12px, 1.5vh, 15px); /* Figma: 15px */
   line-height: 1.5;
+  color: var(--color-ink);
   opacity: 0.85;
-  text-align: center;
-  text-wrap: balance;
+  margin: 0;
+  position: absolute;
+  bottom: 4vh; /* Anchor to bottom of screen */
 }
 
 /* ==========================================================================
-   TABLET
+   RESPONSIVENESS (< 768px)
    ========================================================================== */
 
 @media (max-width: 768px) {
-  :root {
-    --page-gutter: clamp(1rem, 4vw, 1.75rem);
-  }
-
   .notfound-container {
-    padding-top: clamp(5rem, 10svh, 6.5rem);
-    padding-bottom: 1.5rem;
+    gap: 2vh;
+    padding-top: 10vh; /* Shift down slightly to account for mobile nav bars */
   }
 
-  .notfound-number {
-    font-size: clamp(8.5rem, 29vw, 14rem);
+  .archival-corner {
+    width: 50px;
+    height: 50px;
   }
 
-  .notfound-number-wrap {
-    margin-bottom: clamp(1.5rem, 4svh, 2rem);
+  .corner-square {
+    width: 12px;
+    height: 12px;
   }
+
+  .corner-line-h { width: 38px; }
+  .corner-line-v { height: 38px; }
 
   .strike-bar-wrap {
-    height: clamp(2rem, 7vw, 3.25rem);
+    height: clamp(15px, 4vh, 40px);
+    width: 120vw;
   }
 
   .plaque-frame-box {
     aspect-ratio: auto;
-    min-height: clamp(12rem, 32vw, 16rem);
-    padding: 2.5rem clamp(2rem, 8vw, 4rem);
-    margin-bottom: 1.5rem;
+    min-height: 200px;
+    padding: 2.5rem 1.5rem;
+    background: url('Ornate Gold Vintage Plaque Frame.png') center/100% 100% no-repeat;
   }
 
   .plaque-frame-img {
-    object-fit: fill;
-  }
-
-  .plaque-text-content {
-    max-width: 38rem;
-    margin-top: 0;
-  }
-
-  .plaque-heading {
-    margin-bottom: 0.75rem;
-    font-size: clamp(1.125rem, 3vw, 1.5rem);
-    line-height: 1.2;
-  }
-
-  .plaque-subheading {
-    font-size: clamp(0.875rem, 2.1vw, 1.125rem);
-    line-height: 1.4;
+    display: none; /* Hide the img tag and use CSS background for perfect scaling */
   }
 
   .desktop-break {
     display: none;
   }
 
-  .notfound-cta-wrap {
-    margin-bottom: clamp(2rem, 5svh, 2.5rem);
-  }
-
   .go-home-btn {
-    min-width: 13rem;
-    min-height: 3.75rem;
-    font-size: 1.125rem;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
   }
 
   .notfound-copyright {
-    max-width: 36rem;
-    font-size: 0.75rem;
-  }
-}
-
-/* ==========================================================================
-   MOBILE
-   ========================================================================== */
-
-@media (max-width: 520px) {
-  :root {
-    --corner-offset: 0.5rem;
-    --corner-size: 2.5rem;
-    --corner-line: 2rem;
-    --corner-square: 0.75rem;
-  }
-
-  .corner-top-left .corner-square,
-  .corner-top-right .corner-square {
-    top: 7px;
-  }
-
-  .corner-bottom-left .corner-square,
-  .corner-bottom-right .corner-square {
-    bottom: 7px;
-  }
-
-  .corner-top-left .corner-square,
-  .corner-bottom-left .corner-square {
-    left: 7px;
-  }
-
-  .corner-top-right .corner-square,
-  .corner-bottom-right .corner-square {
-    right: 7px;
-  }
-
-  .notfound-container {
-    padding-top: 5.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .notfound-number {
-    font-size: clamp(7.25rem, 31vw, 10rem);
-  }
-
-  .notfound-number-wrap {
-    margin-bottom: 1.75rem;
-  }
-
-  .strike-bar-wrap {
-    height: clamp(1.75rem, 7vw, 2.25rem);
-  }
-
-  .plaque-frame-box {
-    min-height: 11rem;
-    padding: 2rem 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .plaque-heading {
-    font-size: clamp(1rem, 4.5vw, 1.25rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .plaque-subheading {
-    font-size: clamp(0.8125rem, 3.5vw, 0.9375rem);
-    line-height: 1.35;
-  }
-
-  .notfound-cta-wrap {
-    margin-bottom: 2rem;
-  }
-
-  .go-home-btn {
-    min-width: 11.5rem;
-    min-height: 3.25rem;
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-  }
-
-  .notfound-copyright {
-    max-width: 19rem;
-    font-size: 0.6875rem;
-    line-height: 1.45;
-  }
-}
-
-/* Extra-small phones */
-@media (max-width: 360px) {
-  .notfound-number {
-    font-size: 7rem;
-  }
-
-  .plaque-frame-box {
-    min-height: 10.5rem;
-    padding-inline: 1.25rem;
-  }
-
-  .plaque-heading {
-    font-size: 0.9375rem;
-  }
-
-  .plaque-subheading {
-    font-size: 0.75rem;
-  }
-}
-
-/* Short desktop/laptop screens: reduce vertical spacing, not content size
-   so aggressively that text becomes difficult to read. */
-@media (min-width: 769px) and (max-height: 800px) {
-  .notfound-container {
-    padding-top: clamp(3.5rem, 6svh, 4.5rem);
-  }
-
-  .notfound-number-wrap {
-    margin-bottom: clamp(1rem, 2.5svh, 1.5rem);
-  }
-
-  .plaque-frame-box {
-    max-width: min(100%, 65rem);
-    margin-bottom: clamp(0.875rem, 2svh, 1.25rem);
-  }
-
-  .plaque-heading {
-    margin-bottom: clamp(0.5rem, 2svh, 1rem);
-  }
-
-  .notfound-cta-wrap {
-    margin-bottom: clamp(1rem, 3svh, 1.75rem);
-  }
-}
-
-/* Accessibility: respect reduced-motion preferences. */
-@media (prefers-reduced-motion: reduce) {
-  .go-home-btn {
-    transition: none;
-  }
-
-  .go-home-btn:hover {
-    transform: none;
+    position: relative;
+    bottom: auto;
+    margin-top: 2vh;
   }
 }
