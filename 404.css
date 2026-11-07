@@ -112,7 +112,7 @@ body {
 }
 
 /* ==========================================================================
-   MASSIVE 404 & TEXTURED RED PAINT STRIKE-THROUGH
+   MASSIVE 404 & IMAGE STRIKE-THROUGH
    ========================================================================== */
 
 .notfound-number-wrap {
@@ -135,7 +135,7 @@ body {
   margin: 0;
 }
 
-/* The Figma Strike-through (Solid 60px block, rotated) */
+/* Image Strike-through */
 .strike-bar-wrap {
   position: absolute;
   top: 50%;
@@ -143,11 +143,13 @@ body {
   width: 110vw;
   max-width: 1200px;
   height: clamp(20px, 5.5vh, 60px); /* 60px at standard desktop height */
-  background-color: var(--color-redaction);
+  background-image: url('./assets/image404.png'); /* Using your asset */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   transform: translate(-50%, -50%) rotate(-0.35deg);
   pointer-events: none;
   z-index: 2;
-  border-radius: 2px;
 }
 
 /* ==========================================================================
