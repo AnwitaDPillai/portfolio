@@ -1,13 +1,38 @@
 [
   {
+    "employer": "The Week (Malayalam Manorama)",
+    "role": "Freelance Feature Writer",
+    "details": "Commissioned by the Editor in Charge to write a 2,000-word analytical cultural history feature on the invisible labor and economics of Malayalam cinema subtitling. Fact-checked historical and economic data; the piece was accepted for publication by the Features Editor."
+  },
+  {
+    "employer": "The Pulitzer Center",
+    "role": "Selected Student Speaker",
+    "details": "Selected as 1 of 27 speakers from an applicant pool of 1,800+ for the Local Letters for Global Change Student Forum. Delivered a speech on climate displacement in the Global South, advocating for community-led coastal policy in Kerala."
+  },
+  {
     "employer": "Stanford University School of Medicine",
     "role": "Scholar & Journal Club Member",
     "details": "Mini-Fellowship on Molecular Imaging: Completed graduate-level seminars and presented research to Stanford faculty, awarded 1st Place out of ~200 participants. Neuroscience Journal Club: Engaging critically with primary neuroscience literature in a yearlong monthly seminar alongside Stanford faculty."
   },
   {
+    "employer": "Stanford iGEM (SiBRP)",
+    "role": "Bioengineering Research Scholar",
+    "details": "Accepted into Stanford’s iGEM Bioengineering Summer Program (4.5% acceptance rate). Co-authored a 12-page research proposal on a living bacterial biosensor for early detection of persistent infection during antibiotic resistance."
+  },
+  {
     "employer": "Museum Ethnographers Group (MEG)",
     "role": "Contributing Writer",
-    "details": "Invited to author a 3-part editorial series exploring the 'interpretive infrastructure' of museums, focusing on colonial catalogue language, digital surrogates, and AI automation. Collaborating with the MEG editorial team to bridge historical material culture with contemporary digital ethics."
+    "details": "Invited to author a 3-part editorial series exploring the ‘interpretive infrastructure’ of museums, focusing on colonial catalogue language, digital surrogates, and AI automation. Collaborating with the MEG editorial team to bridge historical material culture with contemporary digital ethics."
+  },
+  {
+    "employer": "Aksharam Literary Magazine",
+    "role": "Founder & Editor-in-Chief",
+    "details": "Founded and lead Aksharam, a digital literary magazine rooted in the Global South and publishing writers of all ages across all genres. Building the editorial infrastructure and community model, with a focus on ethical publishing and treating contributors’ labor with dignity."
+  },
+  {
+    "employer": "The Green Screen (NYAS)",
+    "role": "Team Lead",
+    "details": "Leading a six-person international team to build a digital publication pairing climate fiction with research-backed context. Designed and integrated a custom CMS (PagesCMS) and directed the web development, graphic design, and editorial strategy."
   },
   {
     "employer": "Youth Economy Lab",
@@ -15,19 +40,9 @@
     "details": "Selected from a global applicant pool (5% acceptance) to write biweekly long-form articles on economics, finance, and policy. Pitching, drafting, and revising under editorial supervision for publication on the YEL website and journal platform."
   },
   {
-    "employer": "Aksharam Literary Magazine",
-    "role": "Founder & Editor-in-Chief",
-    "details": "Founded and lead Aksharam, a digital literary magazine rooted in the Global South and publishing writers of all ages across all genres. Building the editorial infrastructure and community model, with a focus on ethical publishing and treating contributors' labor with dignity."
-  },
-  {
     "employer": "FXB Global",
     "role": "Climate Advocate",
-    "details": "Selected for FXB's Fall 2026 cohort, joining a global network of 4,000+ advocates across 130+ countries. Training in climate resilience and community action with partners including the Harvard FXB Center and YOUNGO. Designing a climate project for coastal Kerala, building on award-winning marine plastic mitigation work."
-  },
-  {
-    "employer": "The New York Academy of Sciences",
-    "role": "STEM Scholar — The Junior Academy",
-    "details": "Selected for The Junior Academy (<10% acceptance), a highly selective global program for emerging STEM leaders. Currently participating in a semester-long challenge focused on green retrofitting and sustainable infrastructure, leading a six-person international team to build The Green Screen."
+    "details": "Selected for FXB’s Fall 2026 cohort, joining a global network of 4,000+ advocates across 130+ countries. Training in climate resilience and community action with partners including the Harvard FXB Center and YOUNGO. Designing a climate project for coastal Kerala, building on award-winning marine plastic mitigation work."
   },
   {
     "employer": "Substack & Independent Research",
@@ -45,11 +60,6 @@
     "details": "Completed the highly competitive Finance Research Fellowship at Shri Ram College of Commerce, selected from 1,500+ applicants across 6+ countries (<10% acceptance). Research focused on finance, policy, and socio-economic systems."
   },
   {
-    "employer": "Stanford iGEM",
-    "role": "Bioengineering Research Scholar",
-    "details": "Accepted into Stanford's iGEM Bioengineering Summer Program (4.5% acceptance rate). Co-authored a 12-page research proposal on a living bacterial biosensor for early detection of persistent infection during antibiotic resistance."
-  },
-  {
     "employer": "Kode With Klossy & Girls Who Code",
     "role": "Web Development Scholar",
     "details": "Designed and built a web application from scratch using HTML, CSS, and JavaScript. Led front-end development and coordinated sprint tasks across a team of 3 to deliver a functional prototype on deadline."
@@ -58,11 +68,6 @@
     "employer": "Ocean Society of India, Cochin Chapter",
     "role": "Presenter & Independent Researcher",
     "details": "Authored a marine plastic pollution mitigation proposal for the Ocean Society of India; developed winning coastal waste management strategies; presented at CSIR-CUSAT, a premier Indian research institution."
-  },
-  {
-    "employer": "Kendriya Vidyalaya Ernakulam",
-    "role": "Student Representative & Class Prefect",
-    "details": "Elected annually for ten consecutive years to serve as the primary interface between class cohorts and school administration. Coordinated 10+ major school events annually, served on the School Library Committee, and informally mentored junior students preparing for board examinations."
   },
   {
     "employer": "Kelley School of Business, Indiana University",
@@ -76,7 +81,7 @@
   },
   {
     "employer": "International Youth Neuroscience Association",
-    "role": "IYNA Scholar",
+    "role": "Neuroscience Scholar",
     "details": "Completing global training modules in neurobiology, synaptic plasticity, and neurodegenerative pathology."
   },
   {
@@ -87,7 +92,7 @@
   {
     "employer": "UNICEF",
     "role": "U-Report Contributor",
-    "details": "Active participant in UNICEF's global youth engagement platform. Engaging with polls and discussions on issues affecting young people, including education, climate action, and mental health."
+    "details": "Active participant in UNICEF’s global youth engagement platform. Engaging with polls and discussions on issues affecting young people, including education, climate action, and mental health."
   },
   {
     "employer": "Smithsonian Institution",
